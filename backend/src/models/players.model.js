@@ -8,6 +8,16 @@ const playerSchema = mongoose.Schema(
       type: String,
       required: true,
     },
+
+    strike_rate : {
+      type : String,
+      required : true
+    },
+    matches : [
+      {
+        type : mongoose
+      }
+    ],
     age : {
         type : String,
         required : true
