@@ -15,9 +15,19 @@ const playerSchema = mongoose.Schema(
     },
     matches : [
       {
-        type : mongoose
+        type: mongoose.Schema.Types.ObjectId,
+        ref : Matches
       }
     ],
+
+    teams : [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref : Teams
+      }
+    ],
+     
+    
     age : {
         type : String,
         required : true
