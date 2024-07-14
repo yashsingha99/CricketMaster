@@ -13,6 +13,7 @@ const playerSchema = mongoose.Schema(
       type : String,
       required : true
     },
+    
     matches : [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -34,7 +35,6 @@ const playerSchema = mongoose.Schema(
       }
     ],
 
-    
     age : {
         type : String,
         required : true
