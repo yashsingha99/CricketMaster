@@ -4,14 +4,46 @@ const jwt = require("jsonwebtoken");
 
 const playerSchema = mongoose.Schema(
   {
-    name: {
-      type: String,
-      required: true,
-    },
+    generalInformation: {
+      name:{
+        type : String,
+        require : true
+      },
+      role: {
+        type : String,
+        require : true
+      },
 
-    strike_rate : {
-      type : String,
-      required : true
+      teamsPlayedFor: [
+        {
+          type : mongoose.Schema.Types.ObjectId,
+          ref : "Teams"
+        } 
+      ],
+
+      debutYear: {
+        type : Number,
+        require : true
+      },
+
+      nationality:{
+        type : String,
+        require : true
+      },
+    },
+    
+    careerStatistics: {
+      upToYear: 2023,
+      matchesPlayed: 237,
+      runsScored: 7263,
+      battingAverage: 37.54,
+      strikeRate: 129.15,
+      centuries: 7,
+      halfCenturies: 50,
+      highestScore: "122*",
+      wicketsTaken: 4,
+      bowlingAverage: 92.25,
+      bestBowlingFigures: "2/25",
     },
     
     matches : [
@@ -21,13 +53,7 @@ const playerSchema = mongoose.Schema(
       }
     ],
 
-    teams : [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref : Teams
-      }
-    ],
-     
+    
     best_Matches : [
       {
         type: mongoose.Schema.Types.ObjectId,
