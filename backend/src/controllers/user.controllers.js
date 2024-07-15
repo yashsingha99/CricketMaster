@@ -1,0 +1,116 @@
+const User = require("../models/user.model");
+
+const register = asyncHandler(async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+    if ([name, email, password].some((field) => field?.trim() === "")) {
+      res.status(400).json({ message: "Insufficient data" });
+    }
+    const isUserExist = await User.findOne({ email });
+    if (isUserExist) {
+      res.status(400).json({ message: " User with email already exist " });
+    }
+    const newUser = User.create({ name, email, password });
+
+    const user = await User.findById(newUser?._id).select("-password");
+
+    return res
+      .status(200)
+      .json({ user, message: "successfully user is created" });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+const login = asyncHandler(async (req, res) => {
+  const { email, password } = req.body;
+  if (!email || !password) {
+    res.status(400).json({ message: "All credentials are required" });
+  }
+
+  const checkUser = await User.findOne({ email });
+  if (!checkUser) {
+    res.status(400).json({ message: "email is wrong" });
+  }
+
+  const checkPassword = await checkUser.isPasswordCorrect(password);
+  if (!checkPassword) {
+    res.status(401).json({ message: "password must same with email" });
+  }
+
+  const userData = await User.findById(checkUser?._id).select(" -password ");
+
+  if (!userData) {
+    res
+      .status(500)
+      .json({ message: "something went wrong while user is autharizing" });
+  }
+  return res
+    .status(200)
+    .json({ userData, message: "successfully user logged in" });
+});
+
+const getCurrentUser = asyncHandler(async (req, res) => {
+  try {
+    const user = req.body;
+    if (!user) {
+      res.status(400).json({ message: "All credentials are required" });
+    }
+    const currentUser = User.findById(user?._id).select("-password");
+    res.json({ currentUser, message: "successfully retrive current user" });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+const changePassWord = asyncHandler(async (req, res) => {
+try {
+      const { newPassword, oldPassword , user} = req.body;
+      if (!newPassword || !oldPassword || !user) 
+        res.status(401).json({ message: "Insuffficient data"});
+      const userData = await User.findById(user?._id);
+      const isValidPassword = await user.isPasswordCorrect(oldPassword);
+      if (!isValidPassword) res.status(401).json({ message: "oldpassword mismatched"});
+      user.password = newPassword;
+      await user.save({ validateBeforeSave: false });
+      return res.status(200).json({message : "password succesfully changed"});
+
+      //TODO Send password to user via mail 
+} catch (error) {
+    console.log(error);
+}
+});
+
+//* this  method helps us to fetch all user accrding to search by user either user id or email
+//* And   doesn't matter case sensitive
+const fetchAllUsersController = asyncHandler(async (req, res) => {
+  //* just make a regex for fetch all user and regex contains name or email which is passed by user
+  const keyword = req.body.search
+    ? {
+        $or: [
+          { name: { $regex: req.body.search, $options: "i" } },
+          { email: { $regex: req.body.search, $options: "i" } },
+        ],
+      }
+    : {};
+
+  //*    Firstly  retrive   all   users   according  to  keyword   regex
+  //*    After   that  filter all user which ids isn't equal to current user..
+  const users = await User.find(keyword).find({
+    _id: { $ne: req.body._id },
+  });
+  res.json(users);
+});
+
+// const updateProfile = asyncHandler( async( req, res ) => {
+
+// })
+module.exports = {
+  register,
+  login,
+  logoutUser,
+  refreshAccessToken,
+  getCurrentUser,
+  changePassWord,
+  fetchAllUsersController,
+};

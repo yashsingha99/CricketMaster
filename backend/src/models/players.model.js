@@ -3,7 +3,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const playerSchema = mongoose.Schema(
-  {
+  { 
     generalInformation: {
       name:{
         type : String,
@@ -52,7 +52,6 @@ const playerSchema = mongoose.Schema(
         ref : Matches
       }
     ],
-
     
     best_Matches : [
       {
