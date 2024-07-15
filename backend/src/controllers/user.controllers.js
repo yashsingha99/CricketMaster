@@ -81,35 +81,34 @@ try {
 }
 });
 
-//* this  method helps us to fetch all user accrding to search by user either user id or email
-//* And   doesn't matter case sensitive
-const fetchAllUsersController = asyncHandler(async (req, res) => {
-  //* just make a regex for fetch all user and regex contains name or email which is passed by user
-  const keyword = req.body.search
-    ? {
-        $or: [
-          { name: { $regex: req.body.search, $options: "i" } },
-          { email: { $regex: req.body.search, $options: "i" } },
-        ],
-      }
-    : {};
 
-  //*    Firstly  retrive   all   users   according  to  keyword   regex
-  //*    After   that  filter all user which ids isn't equal to current user..
-  const users = await User.find(keyword).find({
-    _id: { $ne: req.body._id },
-  });
-  res.json(users);
+const fetchAllUsersController = asyncHandler(async (req, res) => {
+try {
+      const keyword = req.body.search
+        ? {
+            $or: [
+              { name: { $regex: req.body.search, $options: "i" } },
+              { email: { $regex: req.body.search, $options: "i" } },
+            ],
+          }
+        : {};
+        if(!keyword)
+            res.status(400).json({message : "Insufficient data"})
+      const users = await User.find(keyword).find({
+        _id: { $ne: req.body._id },
+      });
+      res.json(users);
+} catch (error) {
+    console.log(error);
+}
 });
 
-// const updateProfile = asyncHandler( async( req, res ) => {
+const updateProfile = asyncHandler( async( req, res ) => {
 
-// })
+})
 module.exports = {
   register,
   login,
-  logoutUser,
-  refreshAccessToken,
   getCurrentUser,
   changePassWord,
   fetchAllUsersController,
