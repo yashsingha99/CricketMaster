@@ -81,7 +81,6 @@ try {
 }
 });
 
-
 const fetchAllUsersController = asyncHandler(async (req, res) => {
 try {
       const keyword = req.body.search
@@ -106,6 +105,7 @@ try {
 const updateProfile = asyncHandler( async( req, res ) => {
 
 })
+
 module.exports = {
   register,
   login,

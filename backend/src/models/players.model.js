@@ -71,4 +71,4 @@ const playerSchema = mongoose.Schema(
 
 
 const Player = mongoose.model("Player", playerSchema);
-module.exports = User;
+module.exports = Player;
