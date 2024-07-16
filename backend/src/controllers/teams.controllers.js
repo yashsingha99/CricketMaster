@@ -12,8 +12,18 @@ const changeIsActive = async(req, res) => {
 
 }
 
+const addAndChangePlayerData = async(req, res) => {
+
+}
+
+const addFollowers = async(req, res) => {
+
+}
+
 module.exports = {
     addPlayer,
     addPlayerNewStrick,
-    changeIsActive
+    changeIsActive,
+    addAndChangePlayerData,
+    addFollowers
 }
