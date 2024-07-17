@@ -1,18 +1,25 @@
+.container {
+    height: 91vh;
+    width: 99vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
 .wrapper {
     position: relative;
     width: 420px;
     height: 450px;
     /* background: transparent; */
-    
-    background-color: #c09d76;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(120deg, #97f2da, #feb47b);    
     backdrop-filter: blur(30px);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    color: #fff;
     display: flex;
     align-items: center;
-    overflow: hidden;
+    justify-content: center;
+    /* overflow: hidden; */
     transition: height 0.2s ease;
 }
 
@@ -25,10 +32,10 @@
     padding: 30px;
 }
 
-.wrapper .form-box.login {
+/* .wrapper .form-box.login {
     transform: translateX(0);
     transition: transform 0.18s ease;
-}
+} */
 
 .wrapper.active .form-box.login {
     transform: translateX(-400px);
@@ -58,8 +65,7 @@ form .input-box {
     width: 100%;
     height: 50px;
     margin: 30px 0;
-    background: #333; 
-    border-radius: 40px;
+    background: linear-gradient(120deg, #eca390, #feb47b);    border-radius: 40px;
 }
 
 .input-box input {
@@ -76,7 +82,7 @@ form .input-box {
 }
 
 .input-box input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.966);
 }
 
 .input-box .icon {
@@ -85,15 +91,14 @@ form .input-box {
     top: 50%;
     transform: translateY(-50%);
     font-size: 16px;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.966);
 }
 
 form .remember-forgot {
     display: flex;
     justify-content: space-between;
-    font-size: 14.5px;
+    font-size: 17px;
     margin: -12px 0 15px;
-    color: #fff;
 }
 
 .remember-forgot label input {
@@ -101,7 +106,8 @@ form .remember-forgot {
 }
 
 .remember-forgot a {
-    color: #fff;
+    color: #333;
+    font-weight: bolder;
     text-decoration: none;
 }
 
@@ -109,8 +115,15 @@ form .remember-forgot {
     text-decoration: underline;
 }
 
-form button {
+.main-btn {
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form button {
+    width: 100px;
     height: 45px;
     background: #fff;
     border: none;
@@ -125,7 +138,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #ccc;
+    background-color: rgb(247, 166, 116);
 }
 
 form .register-link {
@@ -134,10 +147,11 @@ form .register-link {
     margin: 20px 0 15px;
 }
 
-.register-link p a {
-    color: #fff;
+.register-link h4 a {
+    color: #057a5d;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: bold;
+    font-size: medium;
 }
 
 .register-link p a:hover {
