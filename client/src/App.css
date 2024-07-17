@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body {
-    background: linear-gradient(130deg, #abeaf7, #edf39f);
+    background: linear-gradient(290deg, #abeaf7, #edf39f);
+    height: 100%;
+    width: 100vw;
 }

@@ -1,6 +1,6 @@
 .container {
-    height: 91vh;
-    width: 99vw;
+    height: calc(100vh - 150px);
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,7 +74,7 @@ form .input-box {
     background: transparent;
     border: none;
     outline: none;
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    /* border: 2px solid rgba(255, 255, 255, 0.1); */
     border-radius: 40px;
     font-size: 16px;
     color: #fff;
