@@ -6,6 +6,10 @@
     justify-content: space-between;
 }
 
+.logo {
+    height: 40px;
+}
+
 .right {
     /* height: 100%; */
     display: flex;
@@ -15,6 +19,10 @@
 }
 
 .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
     text-decoration: none;
     color: black;
 }

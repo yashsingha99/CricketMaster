@@ -1,14 +1,14 @@
 import React from "react";
 import "../styles/header.css"
 import { Link } from 'react-router-dom'
-// import icons from 'react-fontawesome'
+import logo from "../images/infinity.png"
 
 const Header = () => {
   return (
     <header>
       <div className="head">
         <Link className="link" to='/'>
-        {/* <i class="fa-solid fa-infinity"></i> */}
+        <img  className='logo' src={logo} alt="img" />
         <h2>CricketMaster</h2>
         </Link>
         
