@@ -81,7 +81,7 @@ try {
 }
 });
 
-const fetchAllUsersController = asyncHandler(async (req, res) => {
+const fetchAllUsers = asyncHandler(async (req, res) => {
 try {
       const keyword = req.body.search
         ? {
@@ -103,7 +103,7 @@ try {
 });
 
 const updateProfile = asyncHandler( async( req, res ) => {
-
+    
 })
 
 module.exports = {
@@ -111,5 +111,5 @@ module.exports = {
   login,
   getCurrentUser,
   changePassWord,
-  fetchAllUsersController,
+  fetchAllUsers,
 };
