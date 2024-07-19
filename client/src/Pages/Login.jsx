@@ -2,14 +2,12 @@ import React from "react";
 import "../styles/Login.css";
 import { FaUser, FaLock } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { Login } from "../api/user.api"
-// import 
+import { login } from "../api/user.api"
+
 const Login = () => {
    
   const handleLogin = () => {
-
-    const res = Login()
-
+    const res = login()
   }
 
   return (
