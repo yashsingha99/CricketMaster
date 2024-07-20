@@ -1,6 +1,6 @@
 const User = require("../models/user.model");
 
-const register = asyncHandler(async (req, res) => {
+const register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
     if ([name, email, password].some((field) => field?.trim() === "")) {
@@ -20,9 +20,9 @@ const register = asyncHandler(async (req, res) => {
   } catch (error) {
     console.log(error);
   }
-});
+};
 
-const login = asyncHandler(async (req, res) => {
+const login = async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
     res.status(400).json({ message: "All credentials are required" });
@@ -48,9 +48,9 @@ const login = asyncHandler(async (req, res) => {
   return res
     .status(200)
     .json({ userData, message: "successfully user logged in" });
-});
+};
 
-const getCurrentUser = asyncHandler(async (req, res) => {
+const getCurrentUser = async (req, res) => {
   try {
     const user = req.body;
     if (!user) {
@@ -61,9 +61,9 @@ const getCurrentUser = asyncHandler(async (req, res) => {
   } catch (error) {
     console.log(error);
   }
-});
+};
 
-const changePassWord = asyncHandler(async (req, res) => {
+const changePassWord = async (req, res) => {
 try {
       const { newPassword, oldPassword , user} = req.body;
       if (!newPassword || !oldPassword || !user) 
@@ -79,9 +79,9 @@ try {
 } catch (error) {
     console.log(error);
 }
-});
+};
 
-const fetchAllUsers = asyncHandler(async (req, res) => {
+const fetchAllUsers = async (req, res) => {
 try {
       const keyword = req.body.search
         ? {
@@ -100,11 +100,11 @@ try {
 } catch (error) {
     console.log(error);
 }
-});
+};
 
-const updateProfile = asyncHandler( async( req, res ) => {
+const updateProfile = async( req, res ) => {
     
-})
+}
 
 module.exports = {
   register,

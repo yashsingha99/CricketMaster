@@ -12,7 +12,7 @@ const Header = () => {
         <h2>CricketMaster</h2>
         </Link>
         
-        <nav class="right">
+        <nav className="right">
           <Link className="link" to='/login'><h3>Login</h3></Link>
           <Link className="link" to='/registration'><h3>Register</h3></Link>
           <Link className="link" to='/'><h3>Home</h3></Link>
