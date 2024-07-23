@@ -10,7 +10,7 @@
 .wrapper {
     position: relative;
     width: 420px;
-    height: 450px;
+    height: 530px;
     /* background: transparent; */
     background: linear-gradient(120deg, #97f2da, #feb47b);    
     backdrop-filter: blur(30px);
@@ -98,7 +98,7 @@ form .remember-forgot {
     display: flex;
     justify-content: space-between;
     font-size: 17px;
-    margin: -12px 0 15px;
+    margin-bottom: 90px;
 }
 
 .remember-forgot label input {

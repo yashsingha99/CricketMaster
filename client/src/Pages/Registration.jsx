@@ -23,11 +23,15 @@ const Registration = () => {
               <FaLock className="icon" />
             </div>
 
-            <div className="remember-forgot">
+            <div className="input-box">
+              <input type="text" placeholder="Your Favourite Team" required />
+            </div>
+
+            {/* <div className="remember-forgot">
               <label>
                 <input type="checkbox" />I agree to the terms & conditions
               </label>
-            </div>
+            </div> */}
             <div className="main-btn">
               <button type="submit">Register</button>
             </div>

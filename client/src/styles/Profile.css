@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.circle {
+    height: 120px;
+    width: 120px;
+    background-color: rgb(93, 245, 224);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inp {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.inp input, .inp label, .edit {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.inp label {
+    font-size: 20px;
+}
+
+.edit:hover {
+    transition: ease 0.7s;
+    cursor: pointer;
+    background-color: rgb(62, 196, 178);
+}
