@@ -6,12 +6,14 @@ import Registration from "./Pages/Registration.jsx";
 import Profile from "./Pages/Profile.jsx"
 import Dashboard from "./Pages/Dashboard.jsx";
 import Contact from "./Pages/contact.jsx";
+import Home from "./Pages/Home.jsx"
 import App from './App.jsx'
 import './index.css'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
+      <Route path='/' element={<Home />} />
       <Route path='login' element={<Login />} />
       <Route path='registration' element={<Registration />} />
       <Route path='profile' element={<Profile />} />

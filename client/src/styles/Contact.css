@@ -1,0 +1,80 @@
+.contactMe {
+    max-width: 520px;
+    margin: 80px auto 80px auto;
+    padding: 40px;
+    background: linear-gradient(120deg, #97f2da, #feb47b);    
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px;
+    font-family: Arial, sans-serif;
+
+  }
+
+  .contactMe > h1{
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-bottom: 10px;
+    font-weight: 600;
+    border-bottom: 2px solid black;
+  }
+
+  .contactMe form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactMe label {
+    padding-top: 20px;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+
+  .contactMe input,
+  .contactMe textarea {
+    padding: 15px;
+    margin-bottom: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    outline: none;
+  }
+
+  .contactMe textarea {
+    resize: vertical;
+    margin-top: 10px;
+  }
+
+  .contactMe input[type="submit"] {
+    transition: 0.5s;
+    border-radius: 7px;
+    border: 1px solid black;
+    padding: 10px 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    width: 120px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: rgb(128, 253, 255);
+  }
+
+
+
+  .contactMe input[type="submit"]:hover {
+    background-color: rgb(5, 181, 216);
+  }
+
+@media (max-width:700px) {
+    .contactMe {
+        max-width: 300px;
+        margin: 150px -20px 150px 30px;
+        padding: 30px;
+        background: linear-gradient(120deg, #97f2da, #feb47b);    
+        border-radius: 10px;
+        box-shadow: 5px 5px 7px ;
+        font-family: Arial, sans-serif;
+    }
+}
