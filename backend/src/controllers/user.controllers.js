@@ -23,32 +23,35 @@ const register = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  const { email, password } = req.body;
-  if (!email || !password) {
-    res.status(400).json({ message: "All credentials are required" });
-  }
+  try {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      return res.status(400).json({ message: "All credentials are required" });
+    }
 
-  const checkUser = await User.findOne({ email });
-  if (!checkUser) {
-    res.status(400).json({ message: "email is wrong" });
-  }
+    const checkUser = await User.findOne({ email });
+    if (!checkUser) {
+      return res.status(400).json({ message: "Email is wrong" });
+    }
 
-  const checkPassword = await checkUser.isPasswordCorrect(password);
-  if (!checkPassword) {
-    res.status(401).json({ message: "password must same with email" });
-  }
+    const checkPassword = await checkUser.isPasswordCorrect(password);
+    if (!checkPassword) {
+      return res.status(401).json({ message: "Password must match with email" });
+    }
 
-  const userData = await User.findById(checkUser?._id).select(" -password ");
+    const userData = await User.findById(checkUser?._id).select(" -password ");
 
-  if (!userData) {
-    res
-      .status(500)
-      .json({ message: "something went wrong while user is autharizing" });
+    if (!userData) {
+      return res.status(500).json({ message: "Something went wrong while user is authorizing" });
+    }
+
+    return res.status(200).json({ message: "Successfully logged in" });
+  } catch (error) {
+    console.log("login", error);
+    return res.status(500).json({ message: "Internal server error" });
   }
-  return res
-    .status(200)
-    .json({ userData, message: "successfully user logged in" });
 };
+
 
 const getCurrentUser = async (req, res) => {
   try {

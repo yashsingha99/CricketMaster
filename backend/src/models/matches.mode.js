@@ -18,7 +18,7 @@ const matchSchema = mongoose.Schema(
         }
      ],
     
-    // abounded, T1 win, T2 win, match cancled
+    // abounded, T1 win, T2 win, match cancelled
      matchStatus : {
         Type : String,
         require : true
