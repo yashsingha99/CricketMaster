@@ -17,7 +17,7 @@ const Login = () => {
         navigate('/dashboard')
       }
        else 
-         alert(res.error.response.data.message)
+         alert("something went wrong")
     } catch (error) {
       console.log(error);
     }

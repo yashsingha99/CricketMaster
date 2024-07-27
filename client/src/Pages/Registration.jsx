@@ -15,7 +15,7 @@ const Registration = () => {
       if (res.status == 200) {
         alert("successfully register");
         navigate("/dashboard");
-      } else alert(res.error.response.data.message);
+      } else alert("something went wrong");
     } catch (error) {
       console.log(error);
     }
