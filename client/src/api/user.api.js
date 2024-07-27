@@ -4,19 +4,22 @@ const URI = "http://localhost:5000";
 
 export const Login = async (user) => {
   try {
-    const res = await axios.post(`${URI}/app/user/`, user);
+    const res = await axios.post(`${URI}/api/user/`, user);
     return res;
   } catch (error) {
     console.log("login", error);
+    error = {error , status : 400}
+    return error
   }
 };
 
 export const Register = async (user) => {
   try {
-    const res = await axios.post(`${URI}/app/user/register`, user);
+    const res = await axios.post(`${URI}/api/user/register`, user);
     return res;
   } catch (error) {
-    console.log("register", error);
+    error = {error , status : 400}
+    return error
   }
 };
 

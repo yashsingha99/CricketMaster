@@ -1,17 +1,27 @@
 import React from "react";
 import "../styles/Login.css";
 import { FaUser, FaLock } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Login as LoginUser } from "../api/user.api";
 import { useForm } from "react-hook-form";
+
 const Login = () => {
-  const { register, handleSubmit } = useForm();
-  const handleLogin = (data) => {
+  const { register, handleSubmit, reset } = useForm();
+  const navigate = useNavigate()
+  const handleLogin = async(data) => {
     try {
-      const res = LoginUser(data);
+      const res = await LoginUser(data);
+      
+      if(res.status == 200){
+        alert("successfully logged in")
+        navigate('/dashboard')
+      }
+       else 
+         alert(res.error.response.data.message)
     } catch (error) {
       console.log(error);
     }
+    reset()
   };
 
   return (
@@ -23,8 +33,8 @@ const Login = () => {
             <div className="input-box">
               <input
                 type="text"
-                placeholder="Username"
-                {...register("username", {
+                placeholder="Email"
+                {...register("email", {
                   required: true,
                 })}
               />

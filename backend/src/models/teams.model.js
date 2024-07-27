@@ -11,14 +11,12 @@ var teamSchema = new mongoose.Schema({
         ref : "Player"
        }
     ],
-    mobile:{
-        type:String,
-        required:true,
-    },
-    password:{
-        type:String,
-        required:true,
-    },
+    matches : [
+        {
+           type:mongoose.Schema.Types.ObjectId,
+           ref : "Match"
+        }
+    ]
 });
 
 const Team = mongoose.model('Team', teamSchema);

@@ -14,7 +14,7 @@ const userSchema = mongoose.Schema(
     },
     password: {
       type: String,
-      required: [true, "password is required"],
+      required: true,
     },
 
     refreshToken: {
@@ -34,7 +34,7 @@ userSchema.pre("save", async function (next) {
 //* create custome methods in models...
  
 userSchema.methods.isPasswordCorrect = async function (enteredPassword) {
-  return await bcrypt.compare(enteredPassword, this.password);
+  return enteredPassword === this.password;
 };
 
 const User = mongoose.model("User", userSchema);

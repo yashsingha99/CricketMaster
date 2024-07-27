@@ -59,12 +59,12 @@ const playerSchema = mongoose.Schema(
         ref : Matches
       }
     ],
-
+    
     age : {
         type : String,
         required : true
-    },
-    
+    }, 
+
   },
   { timestamps: true }
 );

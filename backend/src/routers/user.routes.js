@@ -11,6 +11,5 @@ router.post('/', login);
 router.post('/register', register);
 router.post('/getCurrentUser', getCurrentUser);
 router.post('/changePassWord', changePassWord);
-// Router.post('/fetchAllUsersController', fetchAllUsersController);
-
+//  Router.post('/fetchAllUsersController', fetchAllUsersController);
 module.exports = router

@@ -4,16 +4,16 @@ const register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
     if ([name, email, password].some((field) => field?.trim() === "")) {
-      res.status(400).json({ message: "Insufficient data" });
+      return res.status(400).json({ message: "Insufficient data" });
     }
     const isUserExist = await User.findOne({ email });
     if (isUserExist) {
-      res.status(400).json({ message: " User with email already exist " });
+      return res.status(400).json({ message: " User with email already exist " });
     }
-    const newUser = User.create({ name, email, password });
+    const newUser = await User.create({ name, email, password });
 
     const user = await User.findById(newUser?._id).select("-password");
-
+    
     return res
       .status(200)
       .json({ user, message: "successfully user is created" });
