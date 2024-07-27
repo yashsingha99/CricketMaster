@@ -12,7 +12,7 @@ const Registration = () => {
     try {
       const res = await RegisterUser(data);
 
-      if (res.status == 200) {
+      if (res?.status == 200) {
         alert("successfully register");
         navigate("/dashboard");
       } else alert("something went wrong");

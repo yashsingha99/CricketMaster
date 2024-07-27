@@ -12,7 +12,7 @@ const Login = () => {
     try {
       const res = await LoginUser(data);
       
-      if(res.status == 200){
+      if(res?.status == 200){
         alert("successfully logged in")
         navigate('/dashboard')
       }
