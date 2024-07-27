@@ -4,7 +4,7 @@ import "../styles/Profile.css";
 const Profile = () => {
   return (
     <div className="container">
-      <h2>Hey userName {/* user.name */}, Welcome to your Profile!</h2>
+      <h2 className="black">Hey userName {/* user.name */}, Welcome to your Profile!</h2>
       <div className="wrapper">
         <div className="circle">A {/* user.name.charAt(0) */}</div>
         <form action="" className="details">

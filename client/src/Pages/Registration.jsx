@@ -26,7 +26,7 @@ const Registration = () => {
       <div className="wrapper">
         <div className="form-box">
           <form action="" onSubmit={handleSubmit(handleRegister)}>
-            <h1>Register</h1>
+            <h1 className="black">SignUp</h1>
             <div className="input-box">
               <input
                 type="text"
@@ -78,7 +78,7 @@ const Registration = () => {
               <button type="submit">Register</button>
             </div>
             <div className="register-link">
-              <h4>
+              <h4 className="black">
                 Already have an account? <Link to="/Login">Login</Link>
               </h4>
             </div>
