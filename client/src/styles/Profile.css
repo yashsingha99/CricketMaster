@@ -2,12 +2,17 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    color: black;
+}
+
+.black {
+    color: var(--text-color);
 }
 
 .circle {
     height: 120px;
     width: 120px;
-    background-color: rgb(93, 245, 224);
+    background-color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;

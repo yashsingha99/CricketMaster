@@ -29,7 +29,7 @@ const Login = () => {
       <div className="wrapper">
         <div className="form-box">
           <form action="" onSubmit={handleSubmit(handleLogin)}>
-            <h1>Login</h1>
+            <h1 className="black">Login</h1>
             <div className="input-box">
               <input
                 type="text"
@@ -52,7 +52,7 @@ const Login = () => {
             </div>
 
             <div className="remember-forgot">
-              <label>
+              <label className="black">
                 {/*add cookies for remember me */}
                 <input type="checkbox" />
                 Remember me
@@ -65,7 +65,7 @@ const Login = () => {
             </div>
 
             <div className="register-link">
-              <h4>
+              <h4 className="black">
                 Don't have an account? <Link to="/registration">Register</Link>
               </h4>
             </div>
