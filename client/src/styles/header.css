@@ -1,13 +1,8 @@
-.header {
+nav {
   color: var(--text-color);
   background-color: rgb(68, 68, 159);
-  color: azure;
-}
-
-nav {
-  display: flex;
-  gap: 10px;
-  color: azure;
+  /* color: azure; */
+  height: 70px;
 }
 
 .link1 {
@@ -17,13 +12,8 @@ nav {
   justify-content: center;
   gap: 10px;
   text-decoration: none;
-  margin: 0 10px;
-  margin-right: 35px;
-  color: azure;
-}
-
-.link1 h2 {
-  margin-top: 20px;
+  margin: 0 20px;
+  /* color: azure; */
 }
 
 .logo {
@@ -36,11 +26,12 @@ nav {
   color: var(--text-color);
 }
 
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+h2 {
+  font-size: 25px;
+}
+
+ h3 {
+  font-size: 20px;
 }
 
 .nav .link {
@@ -73,7 +64,7 @@ nav {
 }
 
 .themeBtn {
-  margin: 0px 30px;
+  margin: 0px 10px;
 }
 
 .ThemeButton {
