@@ -3,7 +3,8 @@ import "../styles/Contact.css"
 
 const Contact = () => {
   return (
-    <div className='contactMe'>
+    <div className="cont">
+       <div className='contactMe'>
       <h1>Contact Us</h1>
       <form action='https://formspree.io/f/mkgwobjy' method='POST'>
         <label>Full Name </label>
@@ -16,6 +17,8 @@ const Contact = () => {
         <input type='submit'></input>
       </form>
     </div>
+    </div>
+
   )
 }
 

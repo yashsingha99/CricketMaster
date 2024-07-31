@@ -10,12 +10,16 @@ nav {
 
 .link1 {
   color: var(--text-color);
-  align-items: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   text-decoration: none;
-  margin: 10px 0px;
-  margin-right: 25px;
+  margin: 0 10px;
+  margin-right: 35px;
+}
+.link1 h2 {
+  margin-top: 20px;
 }
 
 .logo {
