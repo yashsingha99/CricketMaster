@@ -1,32 +1,49 @@
 const mongoose = require("mongoose");
 
 const matchSchema = mongoose.Schema(
-   { 
-      matchName : {
-         type : String,
-         require : true 
+  {
+    matchName: {
+      type: String,
+      require: true,
+    },
+
+    teams: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: Team,
       },
-      
-      teams : [
-         {
-           type : mongoose.Schema.Types.ObjectId,
-           ref  : Team
-         },
-         {
-             type : mongoose.Schema.Types.ObjectId,
-             ref  : Team
-         }
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: Team,
+      },
+    ],
+    
+    Matchdate: {
+      typr: Date,
+      require: true,
+    },
+    // abounded, T1 win, T2 win, match cancelled
+    matchStatus: {
+      Type: String,
+      require: true,
+    },
+
+    match: {
+      Team1: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Over",
+        },
       ],
-      
-      // abounded, T1 win, T2 win, match cancelled
-      matchStatus : {
-         Type : String,
-         require : true
-      },
-       
-      
-   },
-   {
-       timestamps:true 
-   }
-)
+      Team1: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Over",
+        },
+      ],
+    },
+  },
+  {
+    timestamps: true,
+  }
+);

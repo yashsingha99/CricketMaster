@@ -1,11 +1,13 @@
 .header {
   color: var(--text-color);
   background-color: rgb(68, 68, 159);
+  color: azure;
 }
 
 nav {
   display: flex;
   gap: 10px;
+  color: azure;
 }
 
 .link1 {
@@ -17,7 +19,9 @@ nav {
   text-decoration: none;
   margin: 0 10px;
   margin-right: 35px;
+  color: azure;
 }
+
 .link1 h2 {
   margin-top: 20px;
 }

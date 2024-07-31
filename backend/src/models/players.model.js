@@ -3,72 +3,110 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const playerSchema = mongoose.Schema(
-  { 
-    generalInformation: {
-      name:{
-        type : String,
-        require : true
+  {
+    generalInfo: {
+      name: {
+        type: String,
+        require: true,
       },
+      
       role: {
-        type : String,
-        require : true
+        type: String,
+        require: true,
       },
-
+      
       teamsPlayedFor: [
         {
-          type : mongoose.Schema.Types.ObjectId,
-          ref : "Teams"
-        } 
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "Teams",
+        },
       ],
 
-      debutYear: {
-        type : Number,
-        require : true
+      highPeformanceYears: [
+        {
+          type: Number,
+          require: true,
+        },
+      ],
+
+      age: {
+        type: String,
+        required: true,
       },
 
-      nationality:{
-        type : String,
-        require : true
+      nationality: {
+        type: String,
+        require: true,
       },
     },
     
     careerStatistics: {
-      upToYear: 2023,
-      matchesPlayed: 237,
-      runsScored: 7263,
-      battingAverage: 37.54,
-      strikeRate: 129.15,
-      centuries: 7,
-      halfCenturies: 50,
-      highestScore: "122*",
-      wicketsTaken: 4,
-      bowlingAverage: 92.25,
-      bestBowlingFigures: "2/25",
+      upToYear: {
+        type: String,
+        require: true,
+      },
+      matchesPlayed: {
+        type: String,
+        require: true,
+      },
+      runsScored: {
+        type: String,
+        require: true,
+      },
+      battingAverage: {
+        type: String,
+        require: true,
+      },
+      strikeRate: {
+        type: String,
+        require: true,
+      },
+      centuries: {
+        type: String,
+        require: true,
+      },
+      halfCenturies: {
+        type: String,
+        require: true,
+      },
+      highestScore: {
+        type: String,
+        require: true,
+      },
+      wicketsTaken: {
+        type: String,
+        require: true,
+      },
+      bowlingAverage: {
+        type: String,
+        require: true,
+      },
+      bestBowlingFigures: {
+        type: String,
+        require: true,
+      }, //"2/25",
+      playerOfTheMatch: {
+        type: String,
+        require: true,
+      },
     },
-    
-    matches : [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref : Matches
-      }
-    ],
-    
-    best_Matches : [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref : Matches
-      }
-    ],
-    
-    age : {
-        type : String,
-        required : true
-    }, 
 
+    matches: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: Matches,
+      },
+    ],
+
+    best_Matches: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: Matches,
+      },
+    ],
   },
   { timestamps: true }
 );
-
 
 const Player = mongoose.model("Player", playerSchema);
 module.exports = Player;
