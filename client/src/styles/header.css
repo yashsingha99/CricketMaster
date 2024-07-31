@@ -10,6 +10,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 25px;
   gap: 10px;
   text-decoration: none;
   margin: 0 20px;
@@ -24,18 +25,19 @@ nav {
 .link {
   text-decoration: none;
   color: var(--text-color);
-}
-
-h2 {
-  font-size: 25px;
-}
-
- h3 {
   font-size: 20px;
 }
 
+h3 {
+  font-size: 20px;
+} 
+
 .nav .link {
   position: relative;
+}
+
+.more {
+  font-size: 20px;
 }
 
 .nav .link:hover,

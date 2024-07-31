@@ -10,7 +10,7 @@ import "../styles/Home.css";
 const Home = () => {
   const images = [
     "https://static.toiimg.com/thumb/msid-99552788,width-1070,height-580,imgsize-212544,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
-    "https://www.deccanchronicle.com/h-upload/2024/05/27/1093083-aa-2242401.webp",
+    "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202008/mumbai-indians-fb-2.jpeg?size=690:388",
     "https://im.rediff.com/cricket/2024/may/27kkr-win2.jpg?w=670&h=900",
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
