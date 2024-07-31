@@ -7,6 +7,12 @@ import Profile from "./Pages/Profile.jsx"
 import Dashboard from "./Pages/Dashboard.jsx";
 import Contact from "./Pages/contact.jsx";
 import Home from "./Pages/Home.jsx"
+import Matches from "./Pages/Matches.jsx"
+import Venues from "./Pages/Venues.jsx"
+import Photos from "./Pages/Photos.jsx"
+import Videos from "./Pages/Videos.jsx"
+import Teams from "./Pages/Team.jsx"
+import Logout from "./Pages/Logout.jsx"
 import App from './App.jsx'
 import './index.css'
 
@@ -15,10 +21,16 @@ const router = createBrowserRouter(
     <Route path='/' element={<App />}>
       <Route path='/' element={<Home />} />
       <Route path='login' element={<Login />} />
+      <Route path='logout' element={<Logout />} />
       <Route path='register' element={<Registration />} />
       <Route path='profile' element={<Profile />} />
       <Route path='dashboard' element={<Dashboard />} />
       <Route path='contact' element={<Contact />} />
+      <Route path='matches' element={<Matches />} />
+      <Route path='venues' element={<Venues />} />
+      <Route path='photos' element={<Photos />} />
+      <Route path='videos' element={<Videos />} />
+      <Route path='teams' element={<Teams />} />
     </Route>
   )
 )
