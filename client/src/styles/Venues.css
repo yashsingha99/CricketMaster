@@ -2,10 +2,11 @@
     padding: 30px;
 }
 
-h2 {
+.conta h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    color: var(--text-color);
 }
 
 .stadium-grid {
