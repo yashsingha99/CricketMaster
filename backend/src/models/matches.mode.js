@@ -47,3 +47,6 @@ const matchSchema = mongoose.Schema(
     timestamps: true,
   }
 );
+
+const Matches = mongoose.model("Matches", matchSchema);
+module.exports = Matches;

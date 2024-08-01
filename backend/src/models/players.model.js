@@ -9,7 +9,10 @@ const playerSchema = mongoose.Schema(
         type: String,
         require: true,
       },
-      
+      avatar : {
+        type : String,
+        required : true
+      },
       role: {
         type: String,
         require: true,
@@ -94,14 +97,14 @@ const playerSchema = mongoose.Schema(
     matches: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: Matches,
+        ref: "Matches",
       },
     ],
 
     best_Matches: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: Matches,
+        ref: "Matches",
       },
     ]
   },

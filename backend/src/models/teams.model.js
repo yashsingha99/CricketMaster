@@ -11,6 +11,12 @@ var teamSchema = new mongoose.Schema({
         ref : "Player"
        }
     ],
+    overAllplayers: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref : "Player"
+        }
+    ],
     matches : [
         {
            type:mongoose.Schema.Types.ObjectId,
