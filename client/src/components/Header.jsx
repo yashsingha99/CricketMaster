@@ -27,7 +27,7 @@ const Header = () => {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
+        
         <div class="collapse navbar-collapse mt-3 ms-3" id="navbarNavAltMarkup">
           <div className="navbar-nav ms-auto mb-3">
             <Link className="link me-3" to="/">Home</Link>

@@ -90,7 +90,7 @@ const playerSchema = mongoose.Schema(
         require: true,
       },
     },
-
+    
     matches: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -103,7 +103,7 @@ const playerSchema = mongoose.Schema(
         type: mongoose.Schema.Types.ObjectId,
         ref: Matches,
       },
-    ],
+    ]
   },
   { timestamps: true }
 );
