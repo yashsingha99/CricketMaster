@@ -3,14 +3,14 @@ h2 {
     margin-bottom: 2rem;
 }
 
-.team-cards {
+.tm-cards {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 4rem;
     margin-bottom: 8px;
 }
 
-.team-card {
+.tm-card {
     cursor: pointer;
     background-color: white;
     border-radius: 0.5rem;
@@ -19,25 +19,25 @@ h2 {
     text-align: center;
 }
 
-.team-card-header {
+.tm-card-header {
     padding: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.team-card-header img {
+.tm-card-header img {
     border-radius: 8px;
     max-width: 100px;
     max-height: 100px;
 }
 
-.team-card-body {
+.tm-card-body {
     padding: 1rem;
     background-color: #f7fafc;
 }
 
-.team-card-body p {
+.tm-card-body p {
     margin: 0;
     font-weight: bold;
 }

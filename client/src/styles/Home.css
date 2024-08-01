@@ -170,6 +170,7 @@ h4 {
   justify-content: space-around;
 }
 
+
 .teams {
   width: 100%;
   display: flex;
@@ -181,7 +182,7 @@ h4 {
   margin-bottom: 20px;
 }
 
-.team-logo img {
+.team-l img {
   margin-bottom: 5px;
   width: 100px;
   height: 100px;
@@ -191,3 +192,11 @@ h4 {
 .team-info h2 {
   font-size: 20px;
 }
+
+.team-card {
+  border-radius: 10px;
+  padding: 50px;
+  background-color: rgb(28, 113, 224);
+  /* background-color: var(--primary-color) !important; */
+  /* color: var(--text-color); */
+ }

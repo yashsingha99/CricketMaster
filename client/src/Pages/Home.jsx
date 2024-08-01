@@ -64,7 +64,7 @@ const Home = () => {
         <div className="teams">
           <div className="team-card">
             <div className="rank">1</div>
-            <div className="team-logo">
+            <div className="team-l">
               <img src={kkr} alt="Kolkata Knight Riders" />
             </div>
             <div className="team-info">
@@ -79,7 +79,7 @@ const Home = () => {
 
           <div className="team-card">
             <div className="rank">2</div>
-            <div className="team-logo">
+            <div className="team-l">
               <img src={srh} alt="SUNRISES HYDERABAD" />
             </div>
             <div className="team-info">
