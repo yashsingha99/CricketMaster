@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import img1 from "../images/2.png";
 import img2 from "../images/3.png";
 import img3 from "../images/4.png";
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import kkr from "../images/kkr.jpeg";
+import srh from "../images/srh.jpeg";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Home.css";
 
 const Home = () => {
@@ -55,6 +56,44 @@ const Home = () => {
         <button className="next" onClick={nextSlide}>
           &#10095;
         </button>
+      </div>
+
+      <div class="points-table">
+        <h1 className="poi">Points Table</h1>
+        <div className="teams">
+          <div class="team-card">
+            <div class="rank">1</div>
+            <div class="team-logo">
+              <img src={kkr} alt="Kolkata Knight Riders" />
+            </div>
+            <div class="team-info">
+              <h2>KOLKATA KNIGHT RIDERS</h2>
+              <p>Points: 20</p>
+              <p>Played: 14</p>
+              <p>Won: 9</p>
+              <p>NRR: 1.428</p>
+              <p>Recent form: N N W W W</p>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="rank">2</div>
+            <div class="team-logo">
+              <img src={srh} alt="SUNRISES HYDERABAD" />
+            </div>
+            <div class="team-info">
+              <h2>SUNRISES HYDERABAD</h2>
+              <p>Points: 17</p>
+              <p>Played: 14</p>
+              <p>Won: 8</p>
+              <p>NRR: 0.414</p>
+              <p>Recent form: W N W L W</p>
+            </div>
+          </div>
+        </div>
+        <Link className="btn btn-primary" to="tables">
+          Full Points Table
+        </Link>
       </div>
 
       <div className="small-cards">
@@ -131,12 +170,8 @@ const Home = () => {
             <img src={img1} alt="" />
             <h4>Kuch Bhi</h4>
           </div>
-
         </div>
       </div>
-
-       
-
     </div>
   );
 };

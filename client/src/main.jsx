@@ -13,6 +13,7 @@ import Photos from "./Pages/Photos.jsx"
 import Videos from "./Pages/Videos.jsx"
 import Teams from "./Pages/Team.jsx"
 import Logout from "./Pages/Logout.jsx"
+import Tables from "./Pages/Tables.jsx"
 import App from './App.jsx'
 import './index.css'
 
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
       <Route path='photos' element={<Photos />} />
       <Route path='videos' element={<Videos />} />
       <Route path='teams' element={<Teams />} />
+      <Route path='tables' element={<Tables />} />
     </Route>
   )
 )
