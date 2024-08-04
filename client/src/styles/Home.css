@@ -110,13 +110,12 @@ h4 {
 }
 
 .table {
-  width: 90%;
+  width: 95%;
   text-align: center;
   font-family: Arial, sans-serif;
   border: 2px solid var(--text-color);
   padding: 20px;
-  margin: 20px;
-  margin-bottom: 30px;
+  margin: 20px 30px 30px 30px;
   border-radius: 7px;
   color: var(--text-color);
   background-color: rgb(96, 96, 195);
@@ -160,7 +159,7 @@ h4 {
 
 .points-table {
   margin: 30px;
-  width: 90%;
+  width: 95%;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -170,6 +169,7 @@ h4 {
   flex-direction: column;
   justify-content: space-around;
 }
+
 
 .teams {
   width: 100%;
@@ -182,7 +182,8 @@ h4 {
   margin-bottom: 20px;
 }
 
-.team-logo img {
+.team-l img {
+  margin-bottom: 5px;
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -191,3 +192,11 @@ h4 {
 .team-info h2 {
   font-size: 20px;
 }
+
+.team-card {
+  border-radius: 10px;
+  padding: 50px;
+  background-color: rgb(68, 68, 159);
+  /* background-color: var(--primary-color) !important; */
+  /* color: var(--text-color); */
+ }

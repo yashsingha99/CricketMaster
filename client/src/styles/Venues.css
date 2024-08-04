@@ -1,0 +1,59 @@
+.conta {
+    padding: 30px;
+}
+
+.conta h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.stadium-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.stadium-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.stadium-card:hover {
+    transform: translateY(-10px);
+}
+
+.stadium-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.stadium-details {
+    padding: 1rem;
+    text-align: center;
+}
+
+.stadium-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stadium-details p {
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.stadium-details a {
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.stadium-details a:hover {
+    text-decoration: underline;
+}

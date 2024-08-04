@@ -1,0 +1,98 @@
+.contai {
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ipl {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header select {
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+    appearance: none;
+  }
+  
+  .header select:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
+  .match-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+  
+  .match-card h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .match-dts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .team-infos {
+    display: flex;
+    align-items: center;
+  }
+
+  .team-infos img {
+    border-radius: 10px;
+  }
+  
+  .team-logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .team-name {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .team-score {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .match-actions {
+    text-align: center;
+  }
+  
+  .match-actions button {
+    background-color: #ff5733;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .match-actions button:hover {
+    background-color: #e64a19;
+  }

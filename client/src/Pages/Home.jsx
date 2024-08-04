@@ -8,6 +8,7 @@ import srh from "../images/srh.jpeg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Home.css";
 
+
 const Home = () => {
   const images = [
     "https://static.toiimg.com/thumb/msid-99552788,width-1070,height-580,imgsize-212544,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
@@ -58,15 +59,15 @@ const Home = () => {
         </button>
       </div>
 
-      <div class="points-table">
+      <div className="points-table">
         <h1 className="poi">Points Table</h1>
         <div className="teams">
-          <div class="team-card">
-            <div class="rank">1</div>
-            <div class="team-logo">
+          <div className="team-card">
+            <div className="rank">1</div>
+            <div className="team-l">
               <img src={kkr} alt="Kolkata Knight Riders" />
             </div>
-            <div class="team-info">
+            <div className="team-info">
               <h2>KOLKATA KNIGHT RIDERS</h2>
               <p>Points: 20</p>
               <p>Played: 14</p>
@@ -76,12 +77,12 @@ const Home = () => {
             </div>
           </div>
 
-          <div class="team-card">
-            <div class="rank">2</div>
-            <div class="team-logo">
+          <div className="team-card">
+            <div className="rank">2</div>
+            <div className="team-l">
               <img src={srh} alt="SUNRISES HYDERABAD" />
             </div>
-            <div class="team-info">
+            <div className="team-info">
               <h2>SUNRISES HYDERABAD</h2>
               <p>Points: 17</p>
               <p>Played: 14</p>
@@ -91,7 +92,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <Link className="btn btn-primary" to="tables">
+        <Link className="btn btn-primary mt-4" to="tables">
           Full Points Table
         </Link>
       </div>
