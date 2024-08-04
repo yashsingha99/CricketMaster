@@ -9,15 +9,15 @@ const playerSchema = mongoose.Schema(
         type: String,
         require: true,
       },
-      avatar : {
-        type : String,
-        required : true
+      avatar: {
+        type: String,
+        required: true,
       },
       role: {
         type: String,
         require: true,
       },
-      
+
       teamsPlayedFor: [
         {
           type: mongoose.Schema.Types.ObjectId,
@@ -42,7 +42,7 @@ const playerSchema = mongoose.Schema(
         require: true,
       },
     },
-    
+
     careerStatistics: {
       upToYear: {
         type: String,
@@ -93,7 +93,7 @@ const playerSchema = mongoose.Schema(
         require: true,
       },
     },
-    
+
     matches: [
       {
         type: mongoose.Schema.Types.ObjectId,
@@ -106,7 +106,12 @@ const playerSchema = mongoose.Schema(
         type: mongoose.Schema.Types.ObjectId,
         ref: "Matches",
       },
-    ]
+    ],
+
+    isActive: {
+      type: Boolean,
+      default: false,
+    },
   },
   { timestamps: true }
 );

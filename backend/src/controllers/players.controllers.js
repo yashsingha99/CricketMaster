@@ -9,13 +9,13 @@ const addPlayer = async (req, res) => {
       )
     ) {
       return res.send(400).json({ mesage: "All credentials are required!!" });
-    }
+    } 
     const findTeam = await Team.findOne({name})
     const generalInfo = {
       name,
       role,
       age,
-      teamsPlayedFor: {findTeam},
+      teamsPlayedFor: [findTeam],
       nationality,
       avatar
     };
@@ -29,7 +29,23 @@ const addPlayer = async (req, res) => {
   }
 };
 
-const updatePlayer = async (req, res) => {};
+
+const updatePlayer = async (req, res) => {
+  try {
+    const { upToYear, matchesPlayed, runsScored, battingAverage, strikeRate, centuries, halfCenturies, highestScore, wicketsTaken, bowlingAverage, bestBowlingFigures, playerOfTheMatch } = req.body;
+     
+    // const findTeam = await Team.findOne({name})
+    const generalInfo = { };
+    
+    const newPlayer = await Player.create({generalInfo});
+    if (!newPlayer) return res.status(500).json({ mesage: "Internel issue" });
+    return res
+      .status(200)
+      .json({ player: newPlayer, message: "Player succesfully update" });
+  } catch (error) {
+    console.log("addPlayer", error);
+  }
+};
 
 module.exports = {
   addPlayer,

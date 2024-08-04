@@ -5,16 +5,15 @@ try {
       const {name} = req.body;
       if(!name)
          return res.status(400).json({message : "insufficient data"})
-        
+      
       const checkTeam = await Team.findOne({name})
       if(checkTeam)
         return res.status(400).json({message : "Team is already exist"})
       const newTeam = await Team.ccreate({name})
       return res.status(200).json({newTeam, message : "sucessfully team added"})
-} catch (error) {
-    console.log("addTeam", error);
-}
-
+  } catch (error) {
+      console.log("addTeam", error);
+  }
 }
 
 const addPlayer = async(req, res) => {

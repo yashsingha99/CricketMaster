@@ -1,24 +1,27 @@
 const mongoose = require("mongoose");
 
-var groundSchema = new mongoose.Schema({
+const groundSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
   },
+
+  place: {
+    type: String,
+    require: true
+  },
+
   matches: [
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Match",
     },
   ],
-  mobile: {
-    type: String,
-    required: true,
-  },
-  password: {
-    type: String,
-    required: true,
-  },
+
+  isActive: {
+    type: Boolean,
+    default: false 
+  }
 });
 
 const Ground = mongoose.model("Ground", groundSchema);
