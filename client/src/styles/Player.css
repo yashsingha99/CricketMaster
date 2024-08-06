@@ -1,0 +1,130 @@
+/* Player.css */
+
+/* Button Group Styles */
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .button-group button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .button-group button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .button-group button:focus {
+    outline: none;
+    background-color: #004494;
+  }
+  
+  .button-group button.active {
+    background-color: #0056b3;
+    font-weight: bold;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .button-group {
+      flex-direction: column;
+    }
+  
+    .button-group button {
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+  
+
+
+/* General Styles for Both Forms */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Form1 Specific Styles */
+  form:nth-of-type(1) {
+    background-color: #e9ecef;
+  }
+  
+  /* Form2 Specific Styles */
+  form:nth-of-type(2) {
+    background-color: #f1f3f5;
+  }
+  
+  @media (max-width: 600px) {
+    form {
+      padding: 15px;
+    }
+  
+    input[type="text"],
+    input[type="number"],
+    select {
+      font-size: 14px;
+    }
+  
+    button[type="submit"] {
+      font-size: 14px;
+    }
+  }
