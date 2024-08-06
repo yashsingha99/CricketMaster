@@ -1,37 +1,41 @@
-const mongoose = require('mongoose'); 
+const mongoose = require("mongoose");
 
 const teamSchema = new mongoose.Schema({
-    name:{
-        type:String,
-        required:true,
+  name: {
+    type: String,
+    required: true,
+  },
+
+  players: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Player",
     },
+  ],
 
-    players: [
-       {
-        type:mongoose.Schema.Types.ObjectId,
-        ref : "Player"
-       }
-    ],
+  overAllplayers: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Player",
+    },
+  ],
 
-    overAllplayers: [
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref : "Player"
-        }
-    ],
-
-    matches : [
-        {
-           type:mongoose.Schema.Types.ObjectId,
-           ref : "Match"
-        }
-    ],
-
-    isActive: {
-        type: Boolean,
-        default: false 
-    } 
+  matches: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Match",
+    },
+  ],
+  avatar: {
+    type: String,
+    default:
+      "https://thumbs.dreamstime.com/b/user-profile-icon-vector-avatar-person-picture-portrait-symbol-neutral-gender-silhouette-circle-button-photo-blank-272664038.jpg",
+  },
+  isActive: {
+    type: Boolean,
+    default: false,
+  },
 });
 
-const Team = mongoose.model('Team', teamSchema);
-module.exports = Team
+const Team = mongoose.model("Team", teamSchema);
+module.exports = Team;

@@ -28,7 +28,7 @@ const addPlayer = async (req, res) => {
     console.log("addPlayer", error);
   }
 };
-
+  
 
 const updatePlayer = async (req, res) => {
   try {

@@ -9,10 +9,12 @@ const playerSchema = mongoose.Schema(
         type: String,
         require: true,
       },
+
       avatar: {
         type: String,
         default: "https://thumbs.dreamstime.com/b/user-profile-icon-vector-avatar-person-picture-portrait-symbol-neutral-gender-silhouette-circle-button-photo-blank-272664038.jpg"
       },
+
       role: {
         type: String,
         require: true,
@@ -24,7 +26,7 @@ const playerSchema = mongoose.Schema(
           ref: "Teams",
         },
       ],
-
+          
       highPeformanceYears: [
         {
           type: Number,

@@ -3,14 +3,14 @@ import "../styles/Player.css";
 
 const Player = () => {
   const [activeForm, setActiveForm] = useState('generalInfo');
-
+  
   return (
     <>
       <div className="button-group">
         <button onClick={() => setActiveForm('generalInfo')}>General Info</button>
         <button onClick={() => setActiveForm('careerStatistics')}>Career Statistics</button>
       </div>
-
+      
       {activeForm === 'generalInfo' && <Form1 />}
       {activeForm === 'careerStatistics' && <Form2 />}
     </>
@@ -38,10 +38,8 @@ const Form1 = () => {
       <div>
         <label htmlFor="teamsPlayedFor">Teams Played For</label>
         <select id="teamsPlayedFor" name="teamsPlayedFor" multiple>
-          {/* Populate options dynamically */}
           <option value="team1">Team 1</option>
           <option value="team2">Team 2</option>
-          {/* Add more options as needed */}
         </select>
       </div>
 
