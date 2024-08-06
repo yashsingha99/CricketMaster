@@ -11,7 +11,7 @@ const playerSchema = mongoose.Schema(
       },
       avatar: {
         type: String,
-        required: true,
+        default: "https://thumbs.dreamstime.com/b/user-profile-icon-vector-avatar-person-picture-portrait-symbol-neutral-gender-silhouette-circle-button-photo-blank-272664038.jpg"
       },
       role: {
         type: String,
