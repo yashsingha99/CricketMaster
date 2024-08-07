@@ -1,5 +1,6 @@
 const Player = require("../models/players.model");
 const Team = require("../models/teams.model");
+
 const addTeam = async (req, res) => {
   try {
     const { name, avatar, owner, ownerAvatar } = req.body;
@@ -25,11 +26,14 @@ const addPlayer = async (req, res) => {
     const { Player, team } = req.body;
     if (!Player || !team)
       return res.status(400).json({ message: "Insufficient data" });
+
     const findPlayer = await Player.findById(Player._id);
     if (!findPlayer)
       return res.status(400).json({ message: "player not found" });
+
     const findTeam = await Player.findById(team._id);
     if (!findTeam) return res.status(400).json({ message: "team not found" });
+    
     const addPlayer = await Team.findByIdAndUpdate(
       findTeam._id,
       {
@@ -59,7 +63,10 @@ const changeIsActive = async (req, res) => {};
 
 const addAndChangePlayerData = async (req, res) => {};
 
-const addFollowers = async (req, res) => {};
+const addFollowers = async (req, res) => {
+  const { team } = req.body;
+
+};
 
 module.exports = {
   addTeam,

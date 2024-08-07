@@ -48,6 +48,13 @@ const teamSchema = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
+
+  followers: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    }
+  ]
 });
 
 const Team = mongoose.model("Team", teamSchema);
