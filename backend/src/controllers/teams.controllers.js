@@ -2,7 +2,7 @@ const Player = require("../models/players.model")
 const Team = require("../models/teams.model")
 const addTeam = async(req, res) => {
 try {
-      const {name} = req.body;
+      const {name, avatar, owner, ownerAvatar} = req.body;
       if(!name)
          return res.status(400).json({message : "insufficient data"})
       
@@ -17,22 +17,36 @@ try {
 }
 
 const addPlayer = async(req, res) => {
-  const {Player, team} = req.body;
-  if(!Player || !team) 
-      return res.status(400).json({message: "Insufficient data"})
-  const findPlayer = await Player.findById(Player._id);
-  if(!findPlayer) 
-    return res.status(400).json({message: "player not found"})
-  const findTeam = await Player.findById(team._id);
-  if(!findTeam) 
-    return res.status(400).json({message: "team not found"})
-  const addPlayer = await Team.findByIdAndUpdate(
-    findTeam._id,
-    {
-      $addToSet: {Player : Player}
-    }
-  )
-  
+ try {
+   const {Player, team} = req.body;
+   if(!Player || !team) 
+       return res.status(400).json({message: "Insufficient data"})
+   const findPlayer = await Player.findById(Player._id);
+   if(!findPlayer) 
+     return res.status(400).json({message: "player not found"})
+   const findTeam = await Player.findById(team._id);
+   if(!findTeam) 
+     return res.status(400).json({message: "team not found"})
+   const addPlayer = await Team.findByIdAndUpdate(
+     findTeam._id,
+     {
+       $addToSet: {players : Player},
+       $addToSet: {overAllplayers : Player},
+     },
+     {
+       new: true
+     }
+   )
+ 
+   if(!addPlayer){
+     return res.status(500).json({message: "Internal issue"})
+   }
+   
+   return res.status(500).json({addPlayer, message: "succesfully players added in team"})
+   
+ } catch (error) {
+   console.log("addPlayer",error);
+ }
 }
 
 const addPlayerNewStrick = async(req, res) => {

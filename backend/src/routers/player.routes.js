@@ -1,8 +1,11 @@
 const { Router } = require("express");
 const router = Router();
 
-const { addPlayer } = require("../controllers/players.controllers");
+const { addTeam, addPlayer } = require("../controllers/players.controllers");
 
+router.post("/addPlayer", addPlayer);
+router.post("/addTeam", addTeam);
+router.post("/addPlayer", addPlayer);
 router.post("/addPlayer", addPlayer);
 
 module.exports =  router ;

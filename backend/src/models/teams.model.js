@@ -12,7 +12,7 @@ const teamSchema = new mongoose.Schema({
       ref: "Player",
     },
   ],
-
+ 
   overAllplayers: [
     {
       type: mongoose.Schema.Types.ObjectId,
@@ -32,6 +32,18 @@ const teamSchema = new mongoose.Schema({
     default:
       "https://thumbs.dreamstime.com/b/user-profile-icon-vector-avatar-person-picture-portrait-symbol-neutral-gender-silhouette-circle-button-photo-blank-272664038.jpg",
   },
+  
+  owner: {
+    type: String,
+    required: true,
+  },
+  
+  ownerAvatar: {
+    type: String,
+    default:
+      "https://thumbs.dreamstime.com/b/user-profile-icon-vector-avatar-person-picture-portrait-symbol-neutral-gender-silhouette-circle-button-photo-blank-272664038.jpg",
+  },
+
   isActive: {
     type: Boolean,
     default: false,
