@@ -1,6 +1,6 @@
 const Player = require("../models/players.model");
 const Team = require("../models/teams.model");
-
+const User = require("../models/user.model");
 const addTeam = async (req, res) => {
   try {
     const { name, avatar, owner, ownerAvatar } = req.body;
@@ -33,7 +33,7 @@ const addPlayer = async (req, res) => {
 
     const findTeam = await Player.findById(team._id);
     if (!findTeam) return res.status(400).json({ message: "team not found" });
-    
+
     const addPlayer = await Team.findByIdAndUpdate(
       findTeam._id,
       {
@@ -50,7 +50,7 @@ const addPlayer = async (req, res) => {
     }
 
     return res
-      .status(500)
+      .status(200)
       .json({ addPlayer, message: "succesfully players added in team" });
   } catch (error) {
     console.log("addPlayer", error);
@@ -64,8 +64,37 @@ const changeIsActive = async (req, res) => {};
 const addAndChangePlayerData = async (req, res) => {};
 
 const addFollowers = async (req, res) => {
-  const { team } = req.body;
+  try {
+    const { team, user } = req.body;
+    if (!team || !user)
+      return res.status(400).json({ message: "Insufficient data" });
 
+    const checkTeam = await Player.findById(team._id);
+    if (!checkTeam) return res.status(400).json({ message: "team not found" });
+
+    const checkUser = await User.findById(team._id);
+    if (!checkUser) return res.status(400).json({ message: "user not found" });
+
+    const addFollowers = await Team.findByIdAndUpdate(
+      checkTeam._id,
+      {
+        $addToSet: { followers: checkUser },
+      },
+      {
+        new: true,
+      }
+    );
+
+    if (!addFollowers) {
+      return res.status(500).json({ message: "Internal issue" });
+    }
+
+    return res
+      .status(200)
+      .json({ addFollowers, message: "succesfully followers added" });
+  } catch (error) {
+    console.log("addFollowers", error);
+  }
 };
 
 module.exports = {
