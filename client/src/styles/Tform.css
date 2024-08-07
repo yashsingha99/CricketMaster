@@ -1,0 +1,87 @@
+/* TeamForm.css */
+
+form {
+    max-width: 600px;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  form div {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="checkbox"],
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  select {
+    height: 120px;
+  }
+  
+  input[type="text"]:focus,
+  select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  input[type="checkbox"] {
+    width: auto;
+    margin-top: 8px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  button[type="submit"]:active {
+    background-color: #004494;
+    transform: translateY(0);
+  }
+  
+  /* Add some spacing between multiple select options */
+  select option {
+    padding: 5px;
+  }
+  
+  /* Adjust form layout for mobile devices */
+  @media (max-width: 768px) {
+    form {
+      padding: 15px;
+    }
+  
+    button[type="submit"] {
+      font-size: 16px;
+    }
+  }
+  
