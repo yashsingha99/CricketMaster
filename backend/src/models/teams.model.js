@@ -26,6 +26,7 @@ const teamSchema = new mongoose.Schema({
       ref: "Match",
     },
   ],
+  
   avatar: {
     type: String,
     default:
