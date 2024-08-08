@@ -2,9 +2,9 @@ const Player = require("../models/players.model");
 
 const addPlayerGeneralInfo = async (req, res) => {
   try {
-    const { name, role, teamsPlayedFor, avatar, age, nationality } = req.body;
+    const { name, role, teamsPlayedFor, age, nationality } = req.body;
     if (
-      [name, role, teamsPlayedFor, age, avatar, nationality].some(
+      [name, role, teamsPlayedFor, age, nationality].some(
         (field) => field?.trim() === ""
       )
     ) {
@@ -17,7 +17,7 @@ const addPlayerGeneralInfo = async (req, res) => {
       age,
       teamsPlayedFor: [findTeam],
       nationality,
-      avatar
+      avatar : req.body?.avatar
     };
     const newPlayer = await Player.create({generalInfo});
     if (!newPlayer) return res.status(500).json({ mesage: "Internel issue" });
@@ -25,7 +25,7 @@ const addPlayerGeneralInfo = async (req, res) => {
       .status(200)
       .json({ player: newPlayer, message: "Player succesfully added" });
   } catch (error) {
-    console.log("addPlayer", error);
+    console.log("addPlayerGeneralInfo", error);
   }
 };
   

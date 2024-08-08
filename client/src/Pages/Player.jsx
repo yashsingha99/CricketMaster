@@ -1,43 +1,90 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "../styles/Player.css";
+import { addPlayerGeneralInfo } from "../api/player.api";
+import { useForm } from "react-hook-form";
 
 const Player = () => {
-  const [activeForm, setActiveForm] = useState('generalInfo');
-  
+  const [activeForm, setActiveForm] = useState("generalInfo");
+
   return (
     <>
       <div className="button-group">
-        <button onClick={() => setActiveForm('generalInfo')}>General Info</button>
-        <button onClick={() => setActiveForm('careerStatistics')}>Career Statistics</button>
+        <button onClick={() => setActiveForm("generalInfo")}>
+          General Info
+        </button>
+        <button onClick={() => setActiveForm("careerStatistics")}>
+          Career Statistics
+        </button>
       </div>
-      
-      {activeForm === 'generalInfo' && <Form1 />}
-      {activeForm === 'careerStatistics' && <Form2 />}
+
+      {activeForm === "generalInfo" && <Form1 />}
+      {activeForm === "careerStatistics" && <Form2 />}
     </>
   );
 };
 
 const Form1 = () => {
+  const { register, handleSubmit, reset } = useForm();
+
+  const handleSubmitForm1 = async (data) => {
+    try {
+      const res = await addPlayerGeneralInfo(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit(handleSubmitForm1)}>
       <div>
         <label htmlFor="name">Name</label>
-        <input type="text" id="name" name="name" required />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          {...register("name", {
+            required: true,
+          })}
+        />
       </div>
 
       <div>
         <label htmlFor="avatar">Avatar URL</label>
-        <input type="text" id="avatar" name="avatar" required />
+        <input
+          type="text"
+          id="avatar"
+          name="avatar"
+          required
+          {...register("avatar", {
+            required: true,
+          })}
+        />
       </div>
 
       <div>
         <label htmlFor="role">Role</label>
-        <input type="text" id="role" name="role" required />
+        <input 
+          type="text" 
+          id="role" 
+          name="role" 
+          required 
+          {...register("avatar", {
+            required: true,
+          })}
+        />
       </div>
 
       <div>
         <label htmlFor="teamsPlayedFor">Teams Played For</label>
-        <select id="teamsPlayedFor" name="teamsPlayedFor" multiple>
+        <select 
+          id="teamsPlayedFor" 
+          name="teamsPlayedFor" 
+          multiple
+          {...register("avatar", {
+            required: true,
+          })}
+        >
           <option value="team1">Team 1</option>
           <option value="team2">Team 2</option>
         </select>
@@ -45,17 +92,42 @@ const Form1 = () => {
 
       <div>
         <label htmlFor="highPeformanceYears">High Performance Years</label>
-        <input type="number" id="highPeformanceYears" name="highPeformanceYears" multiple required />
+        <input
+          type="number"
+          id="highPeformanceYears"
+          name="highPeformanceYears"
+          multiple
+          required
+          {...register("avatar", {
+            required: true,
+          })}
+        />
       </div>
 
       <div>
         <label htmlFor="age">Age</label>
-        <input type="text" id="age" name="age" required />
+        <input 
+          type="text" 
+          id="age" 
+          name="age" 
+          required
+          {...register("avatar", {
+            required: true,
+          })}
+        />
       </div>
 
       <div>
         <label htmlFor="nationality">Nationality</label>
-        <input type="text" id="nationality" name="nationality" required />
+        <input 
+          type="text" 
+          id="nationality" 
+          name="nationality" 
+          required 
+          {...register("avatar", {
+            required: true,
+          })}
+        />
       </div>
 
       <button type="submit">Submit</button>
@@ -118,12 +190,22 @@ const Form2 = () => {
 
       <div>
         <label htmlFor="bestBowlingFigures">Best Bowling Figures</label>
-        <input type="text" id="bestBowlingFigures" name="bestBowlingFigures" required />
+        <input
+          type="text"
+          id="bestBowlingFigures"
+          name="bestBowlingFigures"
+          required
+        />
       </div>
 
       <div>
         <label htmlFor="playerOfTheMatch">Player of the Match</label>
-        <input type="text" id="playerOfTheMatch" name="playerOfTheMatch" required />
+        <input
+          type="text"
+          id="playerOfTheMatch"
+          name="playerOfTheMatch"
+          required
+        />
       </div>
 
       <button type="submit">Submit</button>
