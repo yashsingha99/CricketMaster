@@ -1,7 +1,9 @@
 const { Router } = require("express");
 const router = Router();
-const { addPlayer } = require("../controllers/players.controllers");
+const {addTeam,  addPlayerIntoTeam } = require("../controllers/teams.controllers");
 
-router.post("/addTeam", addPlayer);
+router.post("/addPlayerIntoTeam", addPlayerIntoTeam);
+router.post("/addTeam", addTeam);
+router.post("/addPlayerIntoTeam", addPlayerIntoTeam);
 
 module.exports = router;

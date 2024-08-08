@@ -21,7 +21,7 @@ const addTeam = async (req, res) => {
   }
 };
 
-const addPlayer = async (req, res) => {
+const addPlayerIntoTeam = async (req, res) => {
   try {
     const { Player, team } = req.body;
     if (!Player || !team)
@@ -59,9 +59,37 @@ const addPlayer = async (req, res) => {
 
 const addPlayerNewStrick = async (req, res) => {};
 
-const changeIsActive = async (req, res) => {};
+const changeIsActive = async (req, res) => {
+  try {
+    const { team } = req.body;
+    if (!team )
+      return res.status(400).json({ message: "Insufficient data" });
 
-const addAndChangePlayerData = async (req, res) => {};
+    const checkTeam = await Player.findById(team._id);
+    if (!checkTeam) return res.status(400).json({ message: "team not found" });
+     
+    const changeIsActive = await Team.findByIdAndUpdate(
+      checkTeam._id,
+      {
+        isActive: !checkTeam.isActive
+      },
+      {
+        new: true,
+      }
+    );
+
+    if (!changeIsActive) {
+      return res.status(500).json({ message: "Internal issue" });
+    }
+
+    return res
+      .status(200)
+      .json({ changeIsActive, message: "succesfully change isActive" });
+  } catch (error) {
+    console.log("changeIsActive", error);
+  }
+};
+
 
 const addFollowers = async (req, res) => {
   try {
@@ -99,9 +127,8 @@ const addFollowers = async (req, res) => {
 
 module.exports = {
   addTeam,
-  addPlayer,
+  addPlayerIntoTeam,
   addPlayerNewStrick,
   changeIsActive,
-  addAndChangePlayerData,
   addFollowers,
 };

@@ -1,6 +1,6 @@
 const Player = require("../models/players.model");
 
-const addPlayer = async (req, res) => {
+const addPlayerGeneralInfo = async (req, res) => {
   try {
     const { name, role, teamsPlayedFor, avatar, age, nationality } = req.body;
     if (
@@ -48,6 +48,6 @@ const updatePlayer = async (req, res) => {
 };
 
 module.exports = {
-  addPlayer,
+  addPlayerGeneralInfo,
   updatePlayer,
 };
