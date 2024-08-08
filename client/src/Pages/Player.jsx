@@ -25,6 +25,13 @@ const Player = () => {
 
 const Form1 = () => {
   const { register, handleSubmit, reset } = useForm();
+  const API_SECRET = process.env.API_SECRET;
+  const API_KEY = process.env.API_KEY;
+  const CLOUD_NAME = process.env.CLOUD_NAME;
+  const CLOUDINARY_URL= `cloudinary://${API_KEY}:${API_SECRET}@${CLOUD_NAME}`
+  const handleAvatar = async(avatar) => {
+     
+  }
 
   const handleSubmitForm1 = async (data) => {
     try {
@@ -69,7 +76,7 @@ const Form1 = () => {
           id="role" 
           name="role" 
           required 
-          {...register("avatar", {
+          {...register("role", {
             required: true,
           })}
         />
@@ -81,7 +88,7 @@ const Form1 = () => {
           id="teamsPlayedFor" 
           name="teamsPlayedFor" 
           multiple
-          {...register("avatar", {
+          {...register("teamsPlayedFor", {
             required: true,
           })}
         >
@@ -98,7 +105,7 @@ const Form1 = () => {
           name="highPeformanceYears"
           multiple
           required
-          {...register("avatar", {
+          {...register("highPeformanceYears", {
             required: true,
           })}
         />
@@ -111,7 +118,7 @@ const Form1 = () => {
           id="age" 
           name="age" 
           required
-          {...register("avatar", {
+          {...register("age", {
             required: true,
           })}
         />
@@ -124,7 +131,7 @@ const Form1 = () => {
           id="nationality" 
           name="nationality" 
           required 
-          {...register("avatar", {
+          {...register("nationality", {
             required: true,
           })}
         />
