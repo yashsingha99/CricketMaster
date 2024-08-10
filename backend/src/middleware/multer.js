@@ -20,7 +20,7 @@ const storage = new CloudinaryStorage({
 
 const upload = async (req, res, next) => {
     try { 
-    const multerConfig = multer({ storage })
+    const multerConfig = multer({ dest: 'uploads/' })
     multerConfig.single(req.body.avatar[0])
     // req.body.avatar ;
     next()
