@@ -25,16 +25,12 @@ const Player = () => {
 
 const Form1 = () => {
   const { register, handleSubmit, reset } = useForm();
-  const API_SECRET = process.env.API_SECRET;
-  const API_KEY = process.env.API_KEY;
-  const CLOUD_NAME = process.env.CLOUD_NAME;
-  const CLOUDINARY_URL= `cloudinary://${API_KEY}:${API_SECRET}@${CLOUD_NAME}`
-  const handleAvatar = async(avatar) => {
-     
-  }
 
   const handleSubmitForm1 = async (data) => {
     try {
+      data = {...data, avatar : data.avatar[0]}
+    console.log(data);
+    
       const res = await addPlayerGeneralInfo(data);
     } catch (error) {
       console.log(error);
@@ -59,7 +55,7 @@ const Form1 = () => {
       <div>
         <label htmlFor="avatar">Avatar URL</label>
         <input
-          type="text"
+          type="file"
           id="avatar"
           name="avatar"
           required

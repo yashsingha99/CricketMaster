@@ -1,15 +1,14 @@
 const Player = require("../models/players.model");
-
+const Team = require("../models/teams.model")
 const addPlayerGeneralInfo = async (req, res) => {
   try {
-    const { name, role, teamsPlayedFor, age, nationality } = req.body;
-    if (
-      [name, role, teamsPlayedFor, age, nationality].some(
-        (field) => field?.trim() === ""
-      )
-    ) {
+    console.log(req.body);
+    
+    const { name, role, teamsPlayedFor, age, nationality, avatar } = req.body;
+    if ( !name || !role || !teamsPlayedFor || !age || !nationality ) {
       return res.send(400).json({ mesage: "All credentials are required!!" });
     } 
+
     const findTeam = await Team.findOne({name})
     const generalInfo = {
       name,
@@ -30,7 +29,7 @@ const addPlayerGeneralInfo = async (req, res) => {
 };
   
 
-const updatePlayer = async (req, res) => {
+const updateCrearePlayer = async (req, res) => {
   try {
     const { upToYear, matchesPlayed, runsScored, battingAverage, strikeRate, centuries, halfCenturies, highestScore, wicketsTaken, bowlingAverage, bestBowlingFigures, playerOfTheMatch } = req.body;
      
@@ -49,5 +48,5 @@ const updatePlayer = async (req, res) => {
 
 module.exports = {
   addPlayerGeneralInfo,
-  updatePlayer,
+  updateCrearePlayer,
 };
