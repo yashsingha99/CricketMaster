@@ -2,7 +2,7 @@ const Player = require("../models/players.model");
 const Team = require("../models/teams.model")
 const addPlayerGeneralInfo = async (req, res) => {
   try {
-    console.log(req.body);
+    // console.log(req.body);
     
     const { name, role, teamsPlayedFor, age, nationality, avatar } = req.body;
     if ( !name || !role || !teamsPlayedFor || !age || !nationality ) {

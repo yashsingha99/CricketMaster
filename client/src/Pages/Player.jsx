@@ -28,9 +28,9 @@ const Form1 = () => {
 
   const handleSubmitForm1 = async (data) => {
     try {
-      data = {...data, avatar : data.avatar[0]}
     console.log(data);
-    
+    const avatarFile = data.avatar[0];
+     data.avatar = avatarFile
       const res = await addPlayerGeneralInfo(data);
     } catch (error) {
       console.log(error);
@@ -38,7 +38,7 @@ const Form1 = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(handleSubmitForm1)}>
+    <form encType="multipart/form-data" onSubmit={handleSubmit(handleSubmitForm1)}>
       <div>
         <label htmlFor="name">Name</label>
         <input

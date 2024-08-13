@@ -7,7 +7,7 @@ const Profile = () => {
       <h2 className="black">Hey userName {/* user.name */}, Welcome to your Profile!</h2>
       <div className="wrapper">
         <div className="circle">A {/* user.name.charAt(0) */}</div>
-        <form action="" className="details">
+        <form action="" encType="multipart/form-data"  className="details">
           <div className="inp">
             <label for="name">Name</label>
             <input id="name" type="text" value="User Name" />{" "}
