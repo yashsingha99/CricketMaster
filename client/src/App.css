@@ -4,3 +4,8 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
+.nav-src{
+  outline: none;
+  border: none;
+}
