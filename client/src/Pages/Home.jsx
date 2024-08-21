@@ -77,7 +77,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="team-card">
+          <div className="bg-white">
             <div className="rank">2</div>
             <div className="team-l">
               <img src={srh} alt="SUNRISES HYDERABAD" />

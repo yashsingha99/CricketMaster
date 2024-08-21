@@ -1,22 +1,3 @@
-:root {
-    --primary-color: rgb(250, 250, 250);
-    --theme-button-bg-img: url(./images/dark-mode-img.png);
-    --theme-button-bg-size : 25px 25px;
-    --theme-button-bg-margin : 5px;
-    --theme-button-bg-color:rgba(237, 242, 245, 0.553);
-    --text-color: black;
-  }
-
-  :root.dark {
-    --primary-color: rgb(2, 30, 47);
-    --theme-button-bg-img: url(./images/light-mode-img.png);
-    --theme-button-bg-color:rgba(182, 214, 234, 0.073);
-    --theme-button-bg-size : 35px 35px;
-    --theme-button-bg-margin : 0px;
-    --text-color: rgb(231, 237, 242);
-  }
-  
-  body {
-    transition: 0.5s;
-    background: var(--primary-color);
-  }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
