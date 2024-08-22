@@ -1,23 +1,32 @@
-const Matches = require("../models/matches.mode")
+const Matches = require("../models/matches.mode");
 
-const addMatch = async(req, res) => {
+const addMatch = async (req, res) => {
   try {
-    
+    const { matchName, team1, team2, matchStatus, ground } = req.body;
+    if (!matchName || !team1 || !team2 || !matchStatus || !ground)
+      return res.status(400).json({ message: "Insufficient data" });
+    const data = {
+      matchName,
+      teams: [team1, team2],
+      Matchdate: Date.now(),
+      matchStatus,
+      ground
+    }
+    const createMatch = await Matches.create(data);
+    if(!createMatch)
+        return res.status(500).json({message:"Internal Issue"})
+    res.status(200).json({})
   } catch (error) {
-    console.log();
+    console.log("addMatch", error);
   }
-}
+};
 
-const updateMatch = async(req, res) => {
- 
-}
+const updateMatch = async (req, res) => {};
 
-const deleteMatch = async(req, res) => {
- 
-}
+const deleteMatch = async (req, res) => {};
 
 module.exports = {
-    addMatch,
-    updateMatch,
-    deleteMatch
-}
+  addMatch,
+  updateMatch,
+  deleteMatch,
+};

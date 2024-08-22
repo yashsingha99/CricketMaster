@@ -9,7 +9,6 @@ const matchSchema = mongoose.Schema(
     
     teams: [
       {
-
         type: mongoose.Schema.Types.ObjectId,
         ref: Team,
       },
@@ -18,13 +17,13 @@ const matchSchema = mongoose.Schema(
         ref: Team,
       },
     ],
-    
+     
     Matchdate: {
       typr: Date,
       require: true,
     },
     
-    // abounded, T1 win, T2 win, match cancelled
+    // abounded, T1 win, T2 win, match cancelled, upcoming, started
     matchStatus: {
       Type: String,
       require: true,
@@ -34,20 +33,20 @@ const matchSchema = mongoose.Schema(
       Team1: [
         {
           type: mongoose.Schema.Types.ObjectId,
-          ref: "Over",
+          ref: Over,
         },
       ],
       Team2: [
         {
           type: mongoose.Schema.Types.ObjectId,
-          ref: "Over",
+          ref: Over,
         },
       ],
     },
 
     ground : {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Over",
+      ref: Ground,
     }
   },
   {
