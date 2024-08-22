@@ -15,13 +15,19 @@ const addMatch = async (req, res) => {
     const createMatch = await Matches.create(data);
     if(!createMatch)
         return res.status(500).json({message:"Internal Issue"})
-    res.status(200).json({})
+    res.status(200).json({createMatch, message: "successfully match created"})
   } catch (error) {
     console.log("addMatch", error);
   }
 };
 
-const updateMatch = async (req, res) => {};
+const updateMatch = async (req, res) => {
+  const {match, query} = req.body;
+  if(!match || !query)
+     return res.status(400).json({message: "Insufficient data"})
+  
+
+};
 
 const deleteMatch = async (req, res) => {};
 
