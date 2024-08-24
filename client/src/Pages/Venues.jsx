@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/Venues.css";
 import chidam from "../images/chidam.jpg";
 import eden from "../images/eden.jpeg";
@@ -6,65 +6,67 @@ import wankhede from "../images/wankhede.jpeg";
 import chinna from "../images/chinnaswami.jpeg";
 import arun from "../images/arun.jpeg";
 import modi from "../images/modi.jpeg";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Venues = () => {
+  const [grounds, setGrounds] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchGrounds = async () => {
+      try {
+        const res = await axios.get("http://localhost:5000/api/ground/grounds");
+        console.log(res);
+        setGrounds(res.data.data); // Assuming the API returns data in a `data` object
+        setLoading(false);
+      } catch (err) {
+        setError(err.message);
+        setLoading(false);
+      }
+    };
+
+    fetchGrounds();
+  }, []);
+
+  if (loading) return <h2 className="text-center mb-4 mt-4">Loading...</h2>;
+  if (error) return <h2 className="text-center mb-4 mt-4">Error: {error}</h2>;
+
   return (
-    <div class="conta">
+    <div className="conta">
       <h2>Venues</h2>
-      <div class="stadium-grid">
-        <div class="stadium-card">
-          <img src={chidam} alt="M. A. Chidambaram Stadium" />
-          <div class="stadium-details">
-            <h3>M. A. Chidambaram Stadium</h3>
-            <p>Chennai</p>
-            <a href="#">View Stadium Details</a>
-          </div>
-        </div>
-
-        <div class="stadium-card">
-          <img src={eden} alt="Eden Gardens" />
-          <div class="stadium-details">
-            <h3>EDEN GARDENS</h3>
-            <p>Kolkata</p>
-            <a href="#">View Stadium Details</a>
-          </div>
-        </div>
-
-        <div class="stadium-card">
-          <img src={wankhede} alt="Wankhede Stadium" />
-          <div class="stadium-details">
-            <h3>Wankhede Stadium</h3>
-            <p>Mumbai</p>
-            <a href="#">View Stadium Details</a>
-          </div>
-        </div>
-
-        <div class="stadium-card">
-          <img src={chinna} alt="Wankhede Stadium" />
-          <div class="stadium-details">
-            <h3>M. Chinnaswamy</h3>
-            <p>Bengaluru</p>
-            <a href="#">View Stadium Details</a>
-          </div>
-        </div>
-
-        <div class="stadium-card">
-          <img src={arun} alt="Wankhede Stadium" />
-          <div class="stadium-details">
-            <h3>Arun Jaitley Stadium</h3>
-            <p>Delhi</p>
-            <a href="#">View Stadium Details</a>
-          </div>
-        </div>
-
-        <div class="stadium-card">
-          <img src={modi} alt="Wankhede Stadium" />
-          <div class="stadium-details">
-            <h3>Narendra Modi Stadium</h3>
-            <p>Ahmedabad</p>
-            <a href="#">View Stadium Details</a>
-          </div>
-        </div>
+      <div className="stadium-grid">
+        {grounds.map((ground) => (
+          <Link to={`/venues/${ground._id}`}>
+            <div className="stadium-card" key={ground._id}>
+              <img
+                src={
+                  ground.name.includes("Chidambaram")
+                    ? chidam
+                    : ground.name.includes("Eden")
+                    ? eden
+                    : ground.name.includes("Wankhede")
+                    ? wankhede
+                    : ground.name.includes("Chinnaswamy")
+                    ? chinna
+                    : ground.name.includes("Arun Jaitley")
+                    ? arun
+                    : modi
+                }
+                alt={ground.name}
+              />
+              <div className="stadium-details">
+                <h3>{ground.name}</h3>
+                <p>
+                  {ground.location.city}, {ground.location.state},{" "}
+                  {ground.location.country}
+                </p>
+                <a href="#">View Stadium Details</a>
+              </div>
+            </div>
+          </Link>
+        ))}
       </div>
     </div>
   );

@@ -16,6 +16,7 @@ import Logout from "./Pages/Logout.jsx"
 import Tables from "./Pages/Tables.jsx"
 import Player from "./Pages/Player.jsx"
 import TeamForm from "./Pages/TeamForm.jsx"
+import SingleGround from "./Pages/SingleGround.jsx"
 import App from './App.jsx'
 import './index.css'
 
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
       <Route path='contact' element={<Contact />} />
       <Route path='matches' element={<Matches />} />
       <Route path='venues' element={<Venues />} />
+      <Route path='venues/:id' element={<SingleGround />} />
       <Route path='photos' element={<Photos />} />
       <Route path='videos' element={<Videos />} />
       <Route path='teams' element={<Teams />} />
