@@ -10,20 +10,16 @@ app.use(cors({
   credentials: true
 }))
 
-// app.use(bodyParser())
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(express.static("public"))
 app.use(cookieParser())
 
 const userRouter = require("./routers/user.routes")
-// const matchRouter = require("./routers/match.router")
 const playerRouter = require("./routers/player.routes")
 const teamRouter = require("./routers/team.routes")
 
 app.use('/api/user', userRouter)
-// app.use('/api/ground', groundRouter)
-// app.use('/api/match', matchRouter)
 app.use('/api/player', playerRouter)
 app.use('/api/team', teamRouter)
 
