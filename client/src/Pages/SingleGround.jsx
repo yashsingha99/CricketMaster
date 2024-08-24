@@ -6,14 +6,16 @@ const SingleGround = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const location = window.location;
-  const groundId = new URLSearchParams(location.search).get("id"); // Extracting the ground ID from the URL query parameter
-
+  const location = (window.location.href).split('/');
+  // console.log(location[4])
+  const groundId = location[4] 
+  // console.log(groundId)
   useEffect(() => {
     const fetchSingleGround = async () => {
       try {
-        const res = await axios.post("http://localhost:5000/api/ground/singleGround", { id: groundId });
-        setGround(res.data.data); // Assuming the API returns the ground data inside a `data` object
+        const res = await axios.post("http://localhost:5000/api/ground/groundQuery", { _id: groundId });
+        // console.log(res.data.results[0])
+        setGround(res.data.results[0]); // Assuming the API returns the ground data inside a `data` object
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -29,11 +31,13 @@ const SingleGround = () => {
 
   return (
     <div>
-      <h2>{ground.name}</h2>
+      <h1>{ground.name}</h1>
       <p>Location: {ground.location.city}, {ground.location.state}, {ground.location.country}</p>
-      <p>Capacity: {ground.capacity}</p>
-      <p>Established: {ground.established}</p>
-      {/* Add more ground details as needed */}
+      <p>Capacity: {ground.capacity} People</p>
+      <p>Home Team: {ground.homeTeams[0]}</p> 
+      {/* <img src="" alt="" />
+      <img src="" alt="" /> */}
+      
     </div>
   );
 };

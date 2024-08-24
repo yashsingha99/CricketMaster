@@ -17,7 +17,7 @@ const Venues = () => {
   useEffect(() => {
     const fetchGrounds = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/ground/grounds");
+        const res = await axios.get("http://localhost:5000/api/ground/getAllGrounds");
         console.log(res);
         setGrounds(res.data.data); // Assuming the API returns data in a `data` object
         setLoading(false);
