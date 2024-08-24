@@ -20,10 +20,10 @@ app.use(cookieParser())
 // const teamRouter = require("./routers/team.routes")
 
 // app.use('/api/user', userRouter)
+// app.use('/api/ground', groundRouter)
+// app.use('/api/match', matchRouter)
 // app.use('/api/player', playerRouter)
 // app.use('/api/team', teamRouter)
-
-
-const groundRouter = require("./routers/ground.routes")
-app.use('/api/ground', groundRouter)
+const ground = require("./routers/ground.routes")
+app.use('/api/ground', ground)
 module.exports = app

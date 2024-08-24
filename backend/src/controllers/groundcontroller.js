@@ -49,7 +49,7 @@ const getAllGrounds = async (req, res) => {
     });
   }
 };
-const sample = require("../sample");
+const { sample } = require("../sample");
 const addData = async () => {
   try {
     const res = await Ground.insertMany(sample);
