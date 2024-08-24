@@ -1,5 +1,3 @@
-const Ground = require("./models/grounds.model");
-
 const sample = [
   {
     name: "Eden Gardens",
@@ -900,20 +898,5 @@ const sample = [
   },
 ];
 
-const { Router } = require("express");
-const router = Router();
-router.post(
-  "/",
-  (saveSampleData = async () => {
-    try {
-      const res = await Ground.insertMany(sample);
-      console.log("Sample data inserted successfully!");
-      return res;
-    } catch (error) {
-      console.error("Error inserting sample data:", error.message);
-      return error;
-    }
-  })
-);
 
-module.exports = router;
+module.exports = sample
