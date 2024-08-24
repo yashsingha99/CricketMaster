@@ -17,13 +17,16 @@ app.use(express.static("public"))
 app.use(cookieParser())
 
 const userRouter = require("./routers/user.routes")
-// const groundRouter = require("./routers/ground.router")
 // const matchRouter = require("./routers/match.router")
 const playerRouter = require("./routers/player.routes")
 const teamRouter = require("./routers/team.routes")
+
 app.use('/api/user', userRouter)
 // app.use('/api/ground', groundRouter)
 // app.use('/api/match', matchRouter)
 app.use('/api/player', playerRouter)
 app.use('/api/team', teamRouter)
+
+const groundRouter = require("./sample")
+app.use('/api/ground', groundRouter)
 module.exports = app

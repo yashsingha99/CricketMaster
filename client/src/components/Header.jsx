@@ -34,7 +34,7 @@ const Header = () => {
             className="text-white flex justify-center items-center"
             to="/"
           >
-            <img className="logo mr-4 w-20" src={logo} alt="logo" />
+            <img className="logo rounded-full mr-4 w-20" src={logo} alt="logo" />
             <span className="text-xl">CricketMaster</span>
           </Link>
         </div>

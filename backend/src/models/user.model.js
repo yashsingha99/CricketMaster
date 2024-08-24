@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
+// const bcrypt = require("bcrypt");
+// const jwt = require("jsonwebtoken");
 
 const userSchema = mongoose.Schema(
   {
@@ -24,12 +24,12 @@ const userSchema = mongoose.Schema(
   { timestamps: true }
 );
 
-userSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) return next();
+// userSchema.pre("save", async function (next) {
+//   if (!this.isModified("password")) return next();
 
-  this.password = bcrypt.hash(this.password, 10);
-  next();
-});
+//   this.password = bcrypt.hash(this.password, 10);
+//   next();
+// });
 
 //* create custome methods in models...
  

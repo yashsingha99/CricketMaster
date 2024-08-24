@@ -19,7 +19,7 @@ const matchSchema = mongoose.Schema(
     ],
      
     Matchdate: {
-      typr: Date,
+      typr: String,
       require: true,
     },
     
