@@ -35,7 +35,7 @@ const groundQuery = async (req, res) => {
 const getAllGrounds = async (req, res) => {
   try {
     const grounds = await Ground.find({}); // Fetch all grounds from the database
-    console.log("grounds", grounds);
+    // console.log("grounds", grounds);
 
     res.status(200).json({
       success: true,
@@ -53,7 +53,7 @@ const { sample } = require("../sample");
 const addData = async () => {
   try {
     const del = await Ground.deleteMany(sample);
-    console.log(del)
+    // console.log(del)
     const res = await Ground.insertMany(sample);
     console.log("Sample data inserted successfully!");
     return res;

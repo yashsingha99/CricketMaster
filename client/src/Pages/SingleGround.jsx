@@ -13,7 +13,7 @@ const SingleGround = () => {
     const fetchSingleGround = async () => {
       try {
         const res = await axios.post("http://localhost:5000/api/ground/groundQuery", { _id: groundId });
-        setGround(res.data.results[0]); // Assuming the API returns the ground data inside a `results` object
+        setGround(res.data.results[0]);
         setLoading(false);
       } catch (err) {
         setError(err.message);
@@ -23,30 +23,41 @@ const SingleGround = () => {
 
     fetchSingleGround();
   }, [groundId]);
-  // console.log(ground)
 
   if (loading) return <h2 className="text-center mt-4 text-xl">Loading...</h2>;
   if (error) return <h2 className="text-center mt-4 text-xl text-red-500">Error: {error}</h2>;
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-       <div className="flex space-x-4">
-        <img src={ground.image1} alt="Ground View 1" className="w-1/2 h-auto rounded-lg shadow-lg" />
-        <img src={ground.image2} alt="Ground View 2" className="w-1/2 h-auto rounded-lg shadow-lg" />
+    <div className="p-6 max-w-4xl mx-auto text-center">
+      <div className="flex justify-center space-x-4 mb-6">
+        <img 
+          src={ground.images[0].url} 
+          alt="Ground View 1" 
+          className="w-3/4 h-auto rounded-lg shadow-lg" 
+        />
+        <img 
+          src={ground.images[1].url} 
+          alt="Ground View 2" 
+          className="w-3/4 h-auto rounded-lg shadow-lg" 
+        />
       </div>
-      <h1 className="text-3xl font-bold mb-4">{ground.name}</h1>
-      <p className="text-lg mb-2"><strong>Location:</strong> {ground.location.city}, {ground.location.state}, {ground.location.country}</p>
-      <p className="text-lg mb-2"><strong>Capacity:</strong> {ground.capacity} People</p>
-      <p className="text-lg mb-2"><strong>Home Team:</strong> {ground.homeTeams[0]}</p>
-      <p className="text-lg mb-2"><strong>Established:</strong> {ground.established.split('T')[0]}</p>
-      <p className="text-lg mb-2"><strong>Last Renovated:</strong> {ground.lastRenovated.split('T')[0]}</p>
-      <p className="text-lg mb-4"><strong>Dimensions: </strong>
-       <span> Length: {ground.dimensions.length} meters</span>
-       <span> Width: {ground.dimensions.width} meters</span>
-       </p>
-      <p className="text-lg mb-4"><strong>Pitch Type:</strong> {ground.pitchType}</p>
+      
+      <h1 className="text-4xl font-bold mb-6">{ground.name}</h1>
+      
+      <div className="text-lg space-y-4">
+        <p><strong>Pitch Type:</strong> {ground.pitchType}</p>
+        <p><strong>Capacity:</strong> {ground.capacity} People</p>
+        <p><strong>Established:</strong> {ground.established.split('T')[0]}</p>
+        <p><strong>Last Renovated:</strong> {ground.lastRenovated.split('T')[0]}</p>
+        <p><strong>Home Team:</strong> {ground.homeTeams[0]}</p>
+        <p><strong>Location:</strong> {ground.location.city}, {ground.location.state}, {ground.location.country}</p>
 
-     
+        <p>
+          <strong>Dimensions:</strong> 
+          <span> Length: {ground.dimensions.length} meters,</span> 
+          <span> Width: {ground.dimensions.width} meters</span>
+        </p>
+      </div>
     </div>
   );
 };
