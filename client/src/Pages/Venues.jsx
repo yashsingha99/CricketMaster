@@ -41,19 +41,7 @@ const Venues = () => {
           <Link to={`/venues/${ground._id}`}  key={ground._id} >
             <div className="stadium-card" key={ground._id}>
               <img
-                src={
-                  ground.name.includes("Chidambaram")
-                    ? chidam
-                    : ground.name.includes("Eden")
-                    ? eden
-                    : ground.name.includes("Wankhede")
-                    ? wankhede
-                    : ground.name.includes("Chinnaswamy")
-                    ? chinna
-                    : ground.name.includes("Arun Jaitley")
-                    ? arun
-                    : modi
-                }
+                src={ground?.images[0]?.url}
                 alt={ground.name}
               />
               <div className="stadium-details">

@@ -3,9 +3,16 @@ import { Link } from "react-router-dom";
 import img1 from "../images/2.png";
 import img2 from "../images/3.png";
 import img3 from "../images/4.png";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/Home.css";
-import srh from "../images/srh.jpeg"
+import srh from "../images/srh.jpeg";
+import kkr from "../images/kkr.jpeg";
+import rr from "../images/rajasthan.jpg";
+import rcb from "../images/rcb.jpeg";
+import csk from "../images/csk.jpeg";
+import dc from "../images/dc.jpeg";
+
+
 const Home = () => {
   const teams = [
     {
@@ -16,7 +23,7 @@ const Home = () => {
       won: 9,
       nrr: 1.428,
       recentForm: ["N", "N", "W", "W", "W"],
-      logo: srh,
+      logo: kkr,
     },
     {
       position: 2,
@@ -26,7 +33,7 @@ const Home = () => {
       won: 8,
       nrr: 0.414,
       recentForm: ["N", "W", "L", "W", "W"],
-      logo: "URL_TO_SH_LOGO",
+      logo: srh,
     },
     {
       position: 3,
@@ -36,7 +43,7 @@ const Home = () => {
       won: 8,
       nrr: 0.273,
       recentForm: ["L", "L", "L", "L", "L"],
-      logo: "URL_TO_RR_LOGO",
+      logo: rr,
     },
     {
       position: 4,
@@ -46,7 +53,27 @@ const Home = () => {
       won: 7,
       nrr: 0.459,
       recentForm: ["W", "W", "W", "W", "W"],
-      logo: "URL_TO_RCB_LOGO",
+      logo: rcb,
+    },
+    {
+      position: 5,
+      name: "Chennai Super King",
+      points: 14,
+      played: 14,
+      won: 10,
+      nrr: 0.489,
+      recentForm: ["N", "W", "W", "N", "W"],
+      logo: csk,
+    },
+    {
+      position: 6,
+      name: "Delhi Capitals",
+      points: 14,
+      played: 14,
+      won: 8,
+      nrr: 0.359,
+      recentForm: ["W", "N", "W", "W", "N"],
+      logo: dc,
     },
   ];
 
@@ -95,49 +122,55 @@ const Home = () => {
           &#10095;
         </button>
       </div>
+      <div className="boss shadow-lg">
+        <h1 className="poi mt-2 text-lg">Points Table</h1>
+        <div className="points-table">
+          <div className="team-container flex justify- gap-5">
+            {teams.map((team) => (
+              <div key={team.position} className="team-card shadow-md ">
+                <div className="top">
+                  <div className="team-rank">{team.position}</div>
+                  <h1 className="team-name">{team.name}</h1>
+                </div>
 
-      <div className="points-table">
-        <h1 className="poi">Points Table</h1>
-        <div className="team-container flex justify-between">
-          {teams.map((team) => (
-            <div key={team.position} className="team-card">
-              <div className="top">
-                <div className="team-rank">{team.position}</div>
-                <h1 className="team-name">{team.name}</h1>
-              </div>
-
-              <img src={team.logo} alt={team.name} className="team-img" />
-              <hr />
-              <div className="team-info">
-                <div className="sm-div">
-                  <strong>{team.points}</strong> Points
+                <div className="flex justify-center">
+                  <img src={team.logo} alt={team.name} className="team-img" />
                 </div>
-                <div className="sm-div">
-                  <strong>{team.played}</strong> Played
+                <hr />
+                <div className="team-info">
+                  <div className="sm-div">
+                    <strong>{team.points}</strong> Points
+                  </div>
+                  <div className="sm-div">
+                    <strong>{team.played}</strong> Played
+                  </div>
+                  <div className="sm-div">
+                    <strong>{team.won}</strong> Won
+                  </div>
+                  <div className="sm-div green">
+                    <strong>{team.nrr.toFixed(3)}</strong> NRR
+                  </div>
                 </div>
-                <div className="sm-div">
-                  <strong>{team.won}</strong> Won
-                </div>
-                <div className="sm-div green">
-                  <strong>{team.nrr.toFixed(3)}</strong> NRR
-                </div>
-              </div>
-              <div className="team-form">
-                <h3 className="recent">Recent form</h3>
-                <div className="form-icons">
-                  {team.recentForm.map((result, index) => (
-                    <span key={index} className={`form-icon ${result}`}>
-                      {result}
-                    </span>
-                  ))}
+                <div className="team-form">
+                  <h3 className="recent mb-3">Recent form</h3>
+                  <div className="form-icons">
+                    {team.recentForm.map((result, index) => (
+                      <span key={index} className={`form-icon ${result}`}>
+                        {result}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        <Link className="btn btn-primary mt-4" to="tables">
-          Full Points Table
-        </Link>
+        <div className="flex items-center justify-center">
+
+          <Link className="btn btn-primary mt-4" to="tables">
+            Full Points Table
+          </Link>
+        </div >
       </div>
 
       <div className="small-cards">
