@@ -18,7 +18,7 @@ const Venues = () => {
     const fetchGrounds = async () => {
       try {
         const res = await axios.get("http://localhost:5000/api/ground/getAllGrounds");
-        console.log(res);
+        // console.log(res);
         setGrounds(res.data.data); // Assuming the API returns data in a `data` object
         setLoading(false);
       } catch (err) {
@@ -38,7 +38,7 @@ const Venues = () => {
       <h2>Venues</h2>
       <div className="stadium-grid">
         {grounds.map((ground) => (
-          <Link to={`/venues/${ground._id}`}>
+          <Link to={`/venues/${ground._id}`}  key={ground._id} >
             <div className="stadium-card" key={ground._id}>
               <img
                 src={

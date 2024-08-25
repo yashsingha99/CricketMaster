@@ -1,3 +1,5 @@
+const Ground = require("./models/grounds.model");
+
 const sample = [
   {
     name: "Eden Gardens",
@@ -13,11 +15,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/eden-gardens-1.jpg",
+        url: "https://static.india.com/wp-content/uploads/2018/08/16-kolkata-eden-gardens-3-1.jpg?impolicy=Medium_Resize&w=1200&h=800",
         description: "Main view of Eden Gardens",
       },
       {
-        url: "https://example.com/eden-gardens-2.jpg",
+        url: "https://akm-img-a-in.tosshub.com/indiatoday/eden-story_647_111717124404.jpg?VersionId=wuyw5Ou_lqTcRl81Yg_z42rVXXYxWI9i",
         description: "Close-up of the pitch",
       },
     ],
@@ -41,11 +43,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/wankhede-1.jpg",
+        url: "https://library.sportingnews.com/styles/crop_style_16_9_desktop/s3/2023-04/banner-1.jpg?h=1d4b4ebd&itok=O_B8CxOM",
         description: "Wankhede Stadium view",
       },
       {
-        url: "https://example.com/wankhede-2.jpg",
+        url: "https://static.tnn.in/thumb/msid-109213173,thumbsize-70430,width-1280,height-720,resizemode-75/109213173.jpg?quality=100",
         description: "Cricket action at Wankhede",
       },
     ],
@@ -69,11 +71,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/chinnaswamy-1.jpg",
+        url: "https://www.google.com/search?sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&sxsrf=ADLYWILRb4r_Lkv1EjDJ9IPcHCd_TvDL2g:1724580918953&q=chinnaswamy+stadium&spell=1&sa=X&ved=2ahUKEwjB2b3I9I-IAxWTRWcHHYmOAZIQBSgAegQIBxAB&biw=1536&bih=695&dpr=1.25",
         description: "View of M. Chinnaswamy Stadium",
       },
       {
-        url: "https://example.com/chinnaswamy-2.jpg",
+        url: "https://www.google.com/search?q=chinnaswamy+stadium+pitch&sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&biw=1536&bih=695&sxsrf=ADLYWIJIYPk1g1FJciqL7Xp_2wkibyssCw%3A1724580939377&ei=SwTLZrLTFtWTseMPma_Q6Qo&oq=chinnaswamy+stadium+pi&gs_lp=Egxnd3Mtd2l6LXNlcnAiFmNoaW5uYXN3YW15IHN0YWRpdW0gcGkqAggAMgUQABiABDIFEAAYgAQyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBhIsRBQAFgAcAB4AJABAJgBngKgAZ4CqgEDMi0xuAEDyAEAmAIBoAKlApgDAIgGAZIHAzItMaAHugY&sclient=gws-wiz-serp",
         description: "Pitch at M. Chinnaswamy Stadium",
       },
     ],
@@ -97,11 +99,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/feroz-shah-kotla-1.jpg",
+        url: "https://www.google.com/search?q=feroz+shah+kotla+stadium+&sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&biw=1536&bih=695&sxsrf=ADLYWIKcu3lvb2OG9pLkdJcmqMItVw_DMg%3A1724581014907&ei=lgTLZqyKN5WbnesPrM6_sA8&ved=0ahUKEwisrZ729I-IAxWVTWcHHSznD_YQ4dUDCBA&uact=5&oq=feroz+shah+kotla+stadium+&gs_lp=Egxnd3Mtd2l6LXNlcnAiGWZlcm96IHNoYWgga290bGEgc3RhZGl1bSAyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIEEAAYHjIGEAAYBRgeMgYQABgFGB4yBhAAGAgYHjIHEAAYgAQYGEiNE1CQAliKC3ABeACQAQCYAd4BoAG8B6oBBTAuMy4yuAEDyAEA-AEBmAICoAKlA5gDAIgGAZIHBTAuMS4xoAe5CA&sclient=gws-wiz-serp",
         description: "Feroz Shah Kotla Ground view",
       },
       {
-        url: "https://example.com/feroz-shah-kotla-2.jpg",
+        url: "https://www.google.com/search?sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&sxsrf=ADLYWIKdbC3Gy4R15NNdp4Q09XOMO9NyGQ:1724581012162&q=feroz+shah+kotla+stadium+pitch&spell=1&sa=X&ved=2ahUKEwjCw_b09I-IAxWhR2wGHQJIIWAQBSgAegQIBxAB&biw=1536&bih=695&dpr=1.25",
         description: "Close-up of Feroz Shah Kotla",
       },
     ],
@@ -125,11 +127,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/punjab-stadium-1.jpg",
+        url: "https://www.google.com/search?q=punjab+cricket+association+stadium&sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&biw=1536&bih=695&sxsrf=ADLYWIJm_mgF1vbZ0qdBxcr1zGQceexzog%3A1724581043177&ei=swTLZq7ICoWHnesP0buC0As&oq=punja+stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiDXB1bmphIHN0YWRpdW0qAggAMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMggQABgFGAcYHkijNlCLGljvLHADeACQAQCYAc8BoAHdCKoBBTAuNC4yuAEDyAEA-AEBmAIIoALsB8ICBBAjGCfCAgoQABiABBhDGIoFwgIFEAAYgATCAgYQABgIGB6YAwCIBgGSBwUzLjQuMaAHyiQ&sclient=gws-wiz-serp",
         description: "View of Punjab Cricket Association Stadium",
       },
       {
-        url: "https://example.com/punjab-stadium-2.jpg",
+        url: "https://www.google.com/search?q=punjab+cricket+association+stadium+pitch&sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&biw=1536&bih=695&sxsrf=ADLYWIIpAAVg43DWlbaey0v4DPlI7Jl5qg%3A1724581093622&ei=5QTLZr3VJf-LnesP4uXBuAE&ved=0ahUKEwj92-Kb9Y-IAxX_RWcHHeJyEBcQ4dUDCBA&uact=5&oq=punjab+cricket+association+stadium+pitch&gs_lp=Egxnd3Mtd2l6LXNlcnAiKHB1bmphYiBjcmlja2V0IGFzc29jaWF0aW9uIHN0YWRpdW0gcGl0Y2gyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBhIkTVQAFjFL3AAeACQAQCYAbsCoAGYEqoBBzAuNS41LjG4AQPIAQD4AQGYAgigAskOwgIFEAAYgATCAgQQABgemAMAkgcHMC4yLjUuMaAH6yY&sclient=gws-wiz-serp",
         description: "Action at Punjab Cricket Association",
       },
     ],
@@ -898,5 +900,20 @@ const sample = [
   },
 ];
 
+const { Router } = require("express");
+const router = Router();
+router.post(
+  "/",
+  (saveSampleData = async () => {
+    try {
+      const res = await Ground.insertMany(sample);
+      console.log("Sample data inserted successfully!");
+      return res;
+    } catch (error) {
+      console.error("Error inserting sample data:", error.message);
+      return error;
+    }
+  })
+);
 
-module.exports = sample
+module.exports = router;

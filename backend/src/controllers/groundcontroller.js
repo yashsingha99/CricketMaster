@@ -52,6 +52,8 @@ const getAllGrounds = async (req, res) => {
 const { sample } = require("../sample");
 const addData = async () => {
   try {
+    const del = await Ground.deleteMany(sample);
+    console.log(del)
     const res = await Ground.insertMany(sample);
     console.log("Sample data inserted successfully!");
     return res;
