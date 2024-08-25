@@ -1,122 +1,139 @@
-const mongoose = require("mongoose");
-// const bcrypt = require("bcrypt");
-// const jwt = require("jsonwebtoken");
+const mongoose = require('mongoose');
 
-const playerSchema = mongoose.Schema(
-  {
-    generalInfo: {
-      name: {
+const playerSchema = new mongoose.Schema({
+    name: {
         type: String,
-        require: true,
-      },
-
-      avatar: {
+    },
+    country: {
         type: String,
-        default: "https://thumbs.dreamstime.com/b/user-profile-icon-vector-avatar-person-picture-portrait-symbol-neutral-gender-silhouette-circle-button-photo-blank-272664038.jpg"
-      },
-
-      role: {
+    },
+    dob: {
+        type: Date,
+    },
+    role: {
         type: String,
-        require: true,
-      },
-
-      teamsPlayedFor: [
-        {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Teams",
-        },
-      ],
-          
-      highPeformanceYears: [
-        {
-          type: Number,
-          require: true,
-        },
-      ],
-
-      age: {
-        type: String,
-        required: true,
-      },
-
-      nationality: {
-        type: String,
-        require: true,
-      },
+        enum: ['batsman', 'bowler'],
+    },
+    // Batting statistics
+    battingAvg: {
+        type: Number,
+        default: null,
+    },
+    strikeRate: {
+        type: Number,
+        default: null,
+    },
+    runsScored: {
+        type: Number,
+        default: null,
+    },
+    ballsFaced: {
+        type: Number,
+        default: null,
+    },
+    highScore: {
+        type: Number,
+        default: null,
+    },
+    hundreds: {
+        type: Number,
+        default: null,
+    },
+    fifties: {
+        type: Number,
+        default: null,
+    },
+    sixes: {
+        type: Number,
+        default: null,
+    },
+    fours: {
+        type: Number,
+        default: null,
+    },
+    runsPerMatch: {
+        type: Number,
+        default: null,
+    },
+    // Bowling statistics
+    wicketsTaken: {
+        type: Number,
+        default: null,
+    },
+    economy: {
+        type: Number,
+        default: null,
+    },
+    bestBowling: {
+        type: Number,
+        default: null,
+    },
+    fiveWickets: {
+        type: Number,
+        default: null,
+    },
+    tenWickets: {
+        type: Number,
+        default: null,
+    },
+    maidens: {
+        type: Number,
+        default: null,
+    },
+    bowlingAverage: {
+        type: Number,
+        default: null,
+    },
+    bowlingStrikeRate: {
+        type: Number,
+        default: null,
+    },
+    bestBowlingInInnings: {
+        type: Number,
+        default: null,
+    },
+    bestBowlingInMatch: {
+        type: Number,
+        default: null,
+    },
+    // Additional stats
+    runsInLastInnings: {
+        type: Number,
+        default: null,
+    },
+    wicketsInLastInnings: {
+        type: Number,
+        default: null,
+    },
+    bestBowlingInLastInnings: {
+        type: Number,
+        default: null,
+    },
+    yearlyStats: {
+        type: Map,
+        of: Number,
+        default: {},
     },
 
-    careerStatistics: {
-      upToYear: {
+    hand: {
         type: String,
-        require: true,
-      },
-      matchesPlayed: {
-        type: String,
-        require: true,
-      },
-      runsScored: {
-        type: String,
-        require: true,
-      },
-      battingAverage: {
-        type: String,
-        require: true,
-      },
-      strikeRate: {
-        type: String,
-        require: true,
-      },
-      centuries: {
-        type: String,
-        require: true,
-      },
-      halfCenturies: {
-        type: String,
-        require: true,
-      },
-      highestScore: {
-        type: String,
-        require: true,
-      },
-      wicketsTaken: {
-        type: String,
-        require: true,
-      },
-      bowlingAverage: {
-        type: String,
-        require: true,
-      },
-      bestBowlingFigures: {
-        type: String,
-        require: true,
-      }, //"2/25",
-      playerOfTheMatch: {
-        type: String,
-        require: true,
-      },
+        enum: ['Right_Hand', 'Left_Hand'],
+        default: null,
     },
-
-    matches: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Matches",
-      },
-    ],
-
-    best_Matches: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Matches",
-      },
-    ],
-
-    isActive: {
-      type: Boolean,
-      default: false,
+    bowlingStyle: {
+        type: String,
+        default: null,
     },
-  },
-  { timestamps: true }
-);
+    additionalStat1: {
+        type: Number,
+        default: null,
+    },
+    additionalStat2: {
+        type: Number,
+        default: null,
+    },
+}, { timestamps: true });
 
-const Player = mongoose.model("Player", playerSchema);
+const Player = mongoose.model('Player', playerSchema);
+
 module.exports = Player;
