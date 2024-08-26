@@ -4,18 +4,25 @@ const playerData = require("../player.data");
 
 const playerQuery = async (req, res) => {
   try {
-    const { name, _id, role, country} = req.body;
+    const { name, _id, role, country, allPlayer} = req.body;
 
-    if (!name && !_id && !role && !country) {
+    if (!name && !_id && !role && !country && !all) {
       return res.status(400).json({ message: "data not found" });
     }
 
+    
+    if(allPlayer){
+      const players = await Player.find({})
+      if(!players)
+         return res.status(400).json({message: "Players Not found"})
+      return res.status(200).json({players, message: "successfully"})
+    }
+    
     const matchStage = [];
-
     if (name) {
       matchStage.push({ name: { $regex: name, $options: "i" } });
     }
-
+    
     if (_id) {
       if (mongoose.Types.ObjectId.isValid(_id)) {
         matchStage.push({ _id: new mongoose.Types.ObjectId(_id) });
