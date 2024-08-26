@@ -4,17 +4,14 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Login from "./Pages/Login.jsx";
 import Registration from "./Pages/Registration.jsx";
 import Profile from "./Pages/Profile.jsx"
-import Dashboard from "./Pages/Dashboard.jsx";
 import Contact from "./Pages/contact.jsx";
 import Home from "./Pages/Home.jsx"
 import Matches from "./Pages/Matches.jsx"
 import Venues from "./Pages/Venues.jsx"
-import Photos from "./Pages/Photos.jsx"
 import Teams from "./Pages/Team.jsx"
 import Logout from "./Pages/Logout.jsx"
 import Tables from "./Pages/Tables.jsx"
-import Player from "./Pages/Player.jsx"
-import TeamForm from "./Pages/TeamForm.jsx"
+import Players from "./Pages/Players.jsx"
 import SingleGround from "./Pages/SingleGround.jsx"
 import App from './App.jsx'
 import './index.css'
@@ -27,16 +24,13 @@ const router = createBrowserRouter(
       <Route path='logout' element={<Logout />} />
       <Route path='register' element={<Registration />} />
       <Route path='profile' element={<Profile />} />
-      <Route path='dashboard' element={<Dashboard />} />
       <Route path='contact' element={<Contact />} />
       <Route path='matches' element={<Matches />} />
       <Route path='venues' element={<Venues />} />
       <Route path='venues/:id' element={<SingleGround />} />
-      <Route path='photos' element={<Photos />} />
       <Route path='teams' element={<Teams />} />
       <Route path='tables' element={<Tables />} />
-      <Route path='player' element={<Player />} />
-      <Route path='tform' element={<TeamForm />} />
+      <Route path='players' element={<Players />} />
     </Route>
   )
 )

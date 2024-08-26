@@ -58,13 +58,7 @@ const Header = () => {
               {isdrop ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
             </p>
             {isdrop && (
-              <div className="absolute w-60 bg-white text-black mt-2 p-2 rounded shadow-lg space-y-2">
-                <Link
-                  className="block text-md hover:bg-gray-200 p-1 rounded"
-                  to="/photos"
-                >
-                  Photos
-                </Link>
+              <div className="absolute w-60 bg-white text-black mt-2 z-10 p-2 rounded shadow-lg space-y-2">
                 <Link
                   className="block text-md hover:bg-gray-200 p-1 rounded"
                   to="/profile"
