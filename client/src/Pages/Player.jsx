@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Player.css";
-import { addPlayerGeneralInfo } from "../api/player.api";
-import { useForm } from "react-hook-form";
-import axios from "axios";
 import { Link } from "react-router-dom";
 import {getPlayer} from "../api/player.api"
 const Player = () => {
@@ -35,20 +32,20 @@ const Player = () => {
          <div className="conta">
       <h2>Players</h2>
       <div className="stadium-grid">
-        {grounds.map((ground) => (
-          <Link to={`/venues/${ground._id}`}  key={ground._id} >
-            <div className="stadium-card" key={ground._id}>
-              <img
+        {players.map((player) => (
+          <Link to={`/venues/${player._id}`}  key={player._id} >
+            <div className="stadium-card" key={player._id}>
+              {/* <img
                 src={ground?.images[0]?.url}
                 alt={ground.name}
-              />
+              /> */}
               <div className="stadium-details">
-                <h3>{ground.name}</h3>
-                <p>
+                <h3>{player.name}</h3>
+                {/* <p>
                   {ground.location.city}, {ground.location.state},{" "}
                   {ground.location.country}
-                </p>
-                <a href="#">View Stadium Details</a>
+                </p> */}
+                {/* <a href="#">View Stadium Details</a> */}
               </div>
             </div>
           </Link>
