@@ -870,34 +870,6 @@ const sample = [
     pitchType: "Grass",
     lastRenovated: "2019-01-01",
   },
-  {
-    name: "Kingsmead",
-    location: {
-      city: "Durban",
-      state: "KwaZulu-Natal",
-      country: "South Africa",
-    },
-    capacity: 25000,
-    dimensions: {
-      length: 160,
-      width: 130,
-    },
-    images: [
-      {
-        url: "https://example.com/kingsmead-1.jpg",
-        description: "Kingsmead view",
-      },
-      {
-        url: "https://example.com/kingsmead-2.jpg",
-        description: "Kingsmead close-up",
-      },
-    ],
-    matches: [],
-    established: "1923-01-01",
-    homeTeams: ["Durban Heat"],
-    pitchType: "Grass",
-    lastRenovated: "2021-01-01",
-  },
 ];
 
 module.exports = sample;

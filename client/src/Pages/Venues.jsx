@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Venues.css";
-import chidam from "../images/chidam.jpg";
-import eden from "../images/eden.jpeg";
-import wankhede from "../images/wankhede.jpeg";
-import chinna from "../images/chinnaswami.jpeg";
-import arun from "../images/arun.jpeg";
-import modi from "../images/modi.jpeg";
 import axios from "axios";
 import { Link } from "react-router-dom";
 

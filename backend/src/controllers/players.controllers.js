@@ -6,7 +6,7 @@ const playerQuery = async (req, res) => {
   try {
     const { name, _id, role, country, allPlayer} = req.body;
 
-    if (!name && !_id && !role && !country && !all) {
+    if (!name && !_id && !role && !country && !allPlayer) {
       return res.status(400).json({ message: "data not found" });
     }
 

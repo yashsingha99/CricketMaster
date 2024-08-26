@@ -13,7 +13,7 @@ const groundQuery = async (req, res) => {
 
     if (_id) {
       if (mongoose.Types.ObjectId.isValid(_id)) {
-        matchStage.push({ _id: mongoose.Types.ObjectId(_id) });
+        matchStage.push({ _id: new mongoose.Types.ObjectId(_id) });
       } else {
         return res.status(400).json({ message: "Ground ID isn't valid" });
       }
@@ -60,7 +60,8 @@ const getAllGrounds = async (req, res) => {
 
 const addData = async () => {
   try {
-    await Ground.deleteMany({});
+    const del = await Ground.deleteMany({});
+    console.log(del);
     const res = await Ground.insertMany(sample);
     console.log("Sample data inserted successfully!");
     return res;
