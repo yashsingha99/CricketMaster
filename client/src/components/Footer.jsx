@@ -4,7 +4,7 @@ import "../styles/footer.css"
 
 const Footer = () => {
   return (
-    <div className='foot'>
+    <div className='foot bg-blue-950 text-white'>
       <Link className='link' to='/'>&copy; CricketMaster</Link>
       <Link className='link' to='/contact'>Contact Us</Link>
       <Link className='link' to='/'>Terms &amp; Conditions</Link>

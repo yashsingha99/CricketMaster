@@ -122,8 +122,6 @@ h4 {
   padding: 20px;
   margin: 20px 30px 30px 30px;
   border-radius: 7px;
-  color: black;
-  background-color: rgb(96, 96, 195);
 }
 
 .table h2 {
@@ -137,8 +135,9 @@ h4 {
 }
 
 .option {
-  padding: 20px;
-  border: 1px solid black;
+  padding: 15px;
+  border: 1px solid white;
+  font-size: 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;

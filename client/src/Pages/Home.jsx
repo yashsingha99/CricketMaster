@@ -167,7 +167,7 @@ const Home = () => {
         </div>
         <div className="flex items-center justify-center">
 
-          <Link className="btn btn-primary mt-4" to="tables">
+          <Link className="btn bg-blue-950 text-white p-3 rounded-lg mt-4" to="tables">
             Full Points Table
           </Link>
         </div >
@@ -199,7 +199,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="table">
+      <div className="table bg-blue-950 text-white">
         <h2>What Are You Looking For?</h2>
         <div className="options">
           <div className="option">
