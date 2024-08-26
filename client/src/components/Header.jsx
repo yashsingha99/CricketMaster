@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 import logo from "../images/logo.jpeg";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import ClearIcon from "@mui/icons-material/Clear";
-import WbSunnyIcon from '@mui/icons-material/WbSunny';
-import BedtimeIcon from '@mui/icons-material/Bedtime';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
-import SearchIcon from '@mui/icons-material/Search';
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import SearchIcon from "@mui/icons-material/Search";
 
 const Header = () => {
   const [isDark, setIsDark] = useState(false);
@@ -24,17 +22,12 @@ const Header = () => {
     <nav className="h-full w-full bg-blue-950">
       <div className="h-full w-full p-2 flex justify-between items-center">
         <div className="flex justify-center items-center gap-8">
-          <span
-            className="cursor-pointer ml-4 text-white"
-            onClick={() => setIsOpen((p) => !p)}
-          >
-            {isOpen ? <DehazeIcon /> : <ClearIcon />}
-          </span>
-          <Link
-            className="text-white flex justify-center items-center"
-            to="/"
-          >
-            <img className="logo rounded-full mr-4 w-20" src={logo} alt="logo" />
+          <Link className="text-white flex justify-center items-center" to="/">
+            <img
+              className="logo h-12 rounded-full mr-4 w-12"
+              src={logo}
+              alt="logo"
+            />
             <span className="text-xl">CricketMaster</span>
           </Link>
         </div>
@@ -46,9 +39,6 @@ const Header = () => {
             </Link>
             <Link className="text-md mr-4" to="/matches">
               Matches
-            </Link>
-            <Link className="text-md mr-4" to="/videos">
-              Videos
             </Link>
             <Link className="text-md mr-4" to="/venues">
               Venues
@@ -120,12 +110,12 @@ const Header = () => {
             />
           </div>
         </div>
-
-        <div className="themeBtn flex justify-center items-center">
-          <button className="text-white" onClick={toggleDarkMode}>
-            {!isDark ? <WbSunnyIcon /> : <BedtimeIcon />}
-          </button>
-        </div>
+        <span
+          className="cursor-pointer ml-4 text-white"
+          onClick={() => setIsOpen((p) => !p)}
+        >
+          {isOpen ? <DehazeIcon /> : <ClearIcon />}
+        </span>
       </div>
     </nav>
   );

@@ -10,7 +10,6 @@ import Home from "./Pages/Home.jsx"
 import Matches from "./Pages/Matches.jsx"
 import Venues from "./Pages/Venues.jsx"
 import Photos from "./Pages/Photos.jsx"
-import Videos from "./Pages/Videos.jsx"
 import Teams from "./Pages/Team.jsx"
 import Logout from "./Pages/Logout.jsx"
 import Tables from "./Pages/Tables.jsx"
@@ -34,7 +33,6 @@ const router = createBrowserRouter(
       <Route path='venues' element={<Venues />} />
       <Route path='venues/:id' element={<SingleGround />} />
       <Route path='photos' element={<Photos />} />
-      <Route path='videos' element={<Videos />} />
       <Route path='teams' element={<Teams />} />
       <Route path='tables' element={<Tables />} />
       <Route path='player' element={<Player />} />
