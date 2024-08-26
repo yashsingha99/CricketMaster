@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/Player.css";
 import { Link } from "react-router-dom";
 import {getPlayer} from "../api/player.api"
-const Player = () => {
+const Players = () => {
   const [players, setPlayers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -58,4 +58,4 @@ const Player = () => {
 
 
 
-export default Player;
+export default Players;

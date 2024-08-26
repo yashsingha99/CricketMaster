@@ -173,32 +173,6 @@ const Home = () => {
         </div >
       </div>
 
-      <div className="small-cards">
-        <div className="h">
-          <h3>Hello</h3>
-          <p>Curated shorts for you</p>
-        </div>
-
-        <div className="aese">
-          <div className="card">
-            <img src={img1} alt="" />
-            <h4>Kuch Bhi</h4>
-          </div>
-          <div className="card">
-            <img src={img2} alt="" />
-            <h4>Kuch Bhi</h4>
-          </div>
-          <div className="card">
-            <img src={img3} alt="" />
-            <h4>Kuch Bhi</h4>
-          </div>
-          <div className="card">
-            <img src={img3} alt="" />
-            <h4>Kuch Bhi</h4>
-          </div>
-        </div>
-      </div>
-
       <div className="table bg-blue-950 text-white">
         <h2>What Are You Looking For?</h2>
         <div className="options">
@@ -213,13 +187,13 @@ const Home = () => {
             </Link>
           </div>
           <div className="option">
-            <Link className="link" to="/venue">
-              Venue
+            <Link className="link" to="/venues">
+              Venues
             </Link>
           </div>
           <div className="option">
-            <Link className="link" to="/photos">
-              Photos
+            <Link className="link" to="/players">
+              Players
             </Link>
           </div>
         </div>
