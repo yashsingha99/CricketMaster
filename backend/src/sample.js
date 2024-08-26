@@ -71,11 +71,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://www.google.com/search?sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&sxsrf=ADLYWILRb4r_Lkv1EjDJ9IPcHCd_TvDL2g:1724580918953&q=chinnaswamy+stadium&spell=1&sa=X&ved=2ahUKEwjB2b3I9I-IAxWTRWcHHYmOAZIQBSgAegQIBxAB&biw=1536&bih=695&dpr=1.25",
+        url: "https://www.royalchallengers.com/PRRCB01/public/styles/817x545_landscape/public/2020-04/275679.jpg?h=61617f72&itok=eXbopVaQ",
         description: "View of M. Chinnaswamy Stadium",
       },
       {
-        url: "https://www.google.com/search?q=chinnaswamy+stadium+pitch&sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&biw=1536&bih=695&sxsrf=ADLYWIJIYPk1g1FJciqL7Xp_2wkibyssCw%3A1724580939377&ei=SwTLZrLTFtWTseMPma_Q6Qo&oq=chinnaswamy+stadium+pi&gs_lp=Egxnd3Mtd2l6LXNlcnAiFmNoaW5uYXN3YW15IHN0YWRpdW0gcGkqAggAMgUQABiABDIFEAAYgAQyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBhIsRBQAFgAcAB4AJABAJgBngKgAZ4CqgEDMi0xuAEDyAEAmAIBoAKlApgDAIgGAZIHAzItMaAHugY&sclient=gws-wiz-serp",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSymYjmYvI-qpQV9WZDLtoMKhNVvBVHvbP6xw&s",
         description: "Pitch at M. Chinnaswamy Stadium",
       },
     ],
@@ -99,11 +99,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://www.google.com/search?q=feroz+shah+kotla+stadium+&sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&biw=1536&bih=695&sxsrf=ADLYWIKcu3lvb2OG9pLkdJcmqMItVw_DMg%3A1724581014907&ei=lgTLZqyKN5WbnesPrM6_sA8&ved=0ahUKEwisrZ729I-IAxWVTWcHHSznD_YQ4dUDCBA&uact=5&oq=feroz+shah+kotla+stadium+&gs_lp=Egxnd3Mtd2l6LXNlcnAiGWZlcm96IHNoYWgga290bGEgc3RhZGl1bSAyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIEEAAYHjIGEAAYBRgeMgYQABgFGB4yBhAAGAgYHjIHEAAYgAQYGEiNE1CQAliKC3ABeACQAQCYAd4BoAG8B6oBBTAuMy4yuAEDyAEA-AEBmAICoAKlA5gDAIgGAZIHBTAuMS4xoAe5CA&sclient=gws-wiz-serp",
+        url: "https://www.cricwindow.com/images/stadiums/feroz_shah_kotla_stadium.jpg",
         description: "Feroz Shah Kotla Ground view",
       },
       {
-        url: "https://www.google.com/search?sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&sxsrf=ADLYWIKdbC3Gy4R15NNdp4Q09XOMO9NyGQ:1724581012162&q=feroz+shah+kotla+stadium+pitch&spell=1&sa=X&ved=2ahUKEwjCw_b09I-IAxWhR2wGHQJIIWAQBSgAegQIBxAB&biw=1536&bih=695&dpr=1.25",
+        url: "https://www.cricketcountry.com/wp-content/uploads/2019/03/Feroz-Shah-Kotla-pitch-CA.jpg",
         description: "Close-up of Feroz Shah Kotla",
       },
     ],
@@ -127,11 +127,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://www.google.com/search?q=punjab+cricket+association+stadium&sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&biw=1536&bih=695&sxsrf=ADLYWIJm_mgF1vbZ0qdBxcr1zGQceexzog%3A1724581043177&ei=swTLZq7ICoWHnesP0buC0As&oq=punja+stadium&gs_lp=Egxnd3Mtd2l6LXNlcnAiDXB1bmphIHN0YWRpdW0qAggAMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMggQABgFGAcYHkijNlCLGljvLHADeACQAQCYAc8BoAHdCKoBBTAuNC4yuAEDyAEA-AEBmAIIoALsB8ICBBAjGCfCAgoQABiABBhDGIoFwgIFEAAYgATCAgYQABgIGB6YAwCIBgGSBwUzLjQuMaAHyiQ&sclient=gws-wiz-serp",
+        url: "https://www.cricwindow.com/images/stadiums/punjab_cricket_association_stadium.jpg",
         description: "View of Punjab Cricket Association Stadium",
       },
       {
-        url: "https://www.google.com/search?q=punjab+cricket+association+stadium+pitch&sca_esv=e7a2bf937769b224&rlz=1C1UEAD_enIN1108IN1108&udm=2&biw=1536&bih=695&sxsrf=ADLYWIIpAAVg43DWlbaey0v4DPlI7Jl5qg%3A1724581093622&ei=5QTLZr3VJf-LnesP4uXBuAE&ved=0ahUKEwj92-Kb9Y-IAxX_RWcHHeJyEBcQ4dUDCBA&uact=5&oq=punjab+cricket+association+stadium+pitch&gs_lp=Egxnd3Mtd2l6LXNlcnAiKHB1bmphYiBjcmlja2V0IGFzc29jaWF0aW9uIHN0YWRpdW0gcGl0Y2gyBxAAGIAEGBgyBxAAGIAEGBgyBxAAGIAEGBhIkTVQAFjFL3AAeACQAQCYAbsCoAGYEqoBBzAuNS41LjG4AQPIAQD4AQGYAgigAskOwgIFEAAYgATCAgQQABgemAMAkgcHMC4yLjUuMaAH6yY&sclient=gws-wiz-serp",
+        url: "https://images.tv9kannada.com/wp-content/uploads/2024/01/mohali-pitch-ind-vs-afg.jpg",
         description: "Action at Punjab Cricket Association",
       },
     ],
@@ -155,11 +155,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/jawaharlal-nehru-1.jpg",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7gVMIhYEG2pHk31k5_QXSJx34ic5LKKyP_g&s",
         description: "Jawaharlal Nehru Stadium view",
       },
       {
-        url: "https://example.com/jawaharlal-nehru-2.jpg",
+        url: "https://images.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/09/20/Pictures/_424567da-9de6-11e7-ba2d-20fa1b34073f.jpg",
         description: "Jawaharlal Nehru Stadium close-up",
       },
     ],
@@ -183,11 +183,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/sardar-patel-1.jpg",
+        url: "https://www.cricwindow.com/images/stadiums/sardar_patel_stadium.jpg",
         description: "Sardar Patel Stadium view",
       },
       {
-        url: "https://example.com/sardar-patel-2.jpg",
+        url: "https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/05/22/Pictures/organised-conditions-hindustan-wankhede-practice-wankhede-association_aa70c086-9bd9-11ea-9ae4-6c4a5d56c128.jpg",
         description: "Inside Sardar Patel Stadium",
       },
     ],
@@ -211,11 +211,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/ma-chidambaram-1.jpg",
+        url: "https://www.iplt20.com/assets/images/stadiumimage/Chennai-new.jpg",
         description: "M. A. Chidambaram Stadium view",
       },
       {
-        url: "https://example.com/ma-chidambaram-2.jpg",
+        url: "https://cdn.shopify.com/s/files/1/0278/4565/6649/files/WhatsApp_Image_2024-01-08_at_07.41.40.webp?v=1704680644",
         description: "Close-up of M. A. Chidambaram",
       },
     ],
@@ -239,11 +239,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/rajiv-gandhi-1.jpg",
+        url: "https://static.toiimg.com/photo/103995162.cms",
         description: "Rajiv Gandhi International view",
       },
       {
-        url: "https://example.com/rajiv-gandhi-2.jpg",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8PCcyfPywkVuXdusBE0-uaZ2uRxg2cX-maw&s",
         description: "Rajiv Gandhi International Stadium close-up",
       },
     ],
@@ -267,11 +267,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/holkar-1.jpg",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnKArnykhV3bnSagyDnOODfAgd_1UqLqVniQ&s",
         description: "Holkar Cricket Stadium view",
       },
       {
-        url: "https://example.com/holkar-2.jpg",
+        url: "https://cdn.newsnationtv.com/resize/460_-/images/2024/01/13/5-77.jpg",
         description: "Holkar Cricket Stadium close-up",
       },
     ],
@@ -295,11 +295,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/arun-jaitley-1.jpg",
+        url: "https://crictoday.com/wp-content/uploads/2023/10/Arun-Jaitley-Stadium-1.jpg",
         description: "Arun Jaitley Stadium view",
       },
       {
-        url: "https://example.com/arun-jaitley-2.jpg",
+        url: "https://i.timesnowhindi.com/stories/Arun_Jaitley_stadium_Delhi_Pitch_report.jpg",
         description: "Close-up of Arun Jaitley Stadium",
       },
     ],
@@ -323,11 +323,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/dy-patil-1.jpg",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsaBDAGtaWgy-SE0yxEGP1PG4iSLrsKtkoJg&s",
         description: "DY Patil Stadium view",
       },
       {
-        url: "https://example.com/dy-patil-2.jpg",
+        url: "https://i.timesnowhindi.com/stories/dy_patil_4.jpg",
         description: "DY Patil Stadium close-up",
       },
     ],
@@ -351,11 +351,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/kardinia-park-1.jpg",
+        url: "https://i.redd.it/gzf1l0gz2rsb1.jpg",
         description: "Kardinia Park view",
       },
       {
-        url: "https://example.com/kardinia-park-2.jpg",
+        url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKAODbtvAJHbYgy_vPXa5qWqT82Lh1Twf3kw&s",
         description: "Kardinia Park close-up",
       },
     ],
@@ -379,11 +379,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/gabba-1.jpg",
+        url: "https://www.austadiums.com/stadiums/photos/The-Gabba.jpg",
         description: "Gabba view",
       },
       {
-        url: "https://example.com/gabba-2.jpg",
+        url: "https://www.thestatesman.com/wp-content/uploads/2022/12/Gabba-Pitch-1.jpg",
         description: "Gabba close-up",
       },
     ],
@@ -407,11 +407,11 @@ const sample = [
     },
     images: [
       {
-        url: "https://example.com/mcg-1.jpg",
+        url: "https://s.ndtvimg.com/images/entities/300/melbourne-cricket-ground-26.png",
         description: "Melbourne Cricket Ground view",
       },
       {
-        url: "https://example.com/mcg-2.jpg",
+        url: "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/01/12/641342-638531-mcg-pitch-ashes-2017-18-twitter.jpg",
         description: "Melbourne Cricket Ground close-up",
       },
     ],
