@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../images/logo.jpeg";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import ClearIcon from "@mui/icons-material/Clear";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import SearchIcon from "@mui/icons-material/Search";
-
+import Cookies from "js-cookie"
 const Header = () => {
   const [isDark, setIsDark] = useState(false);
   const [isdrop, setIsdrop] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
-
+  const navigate = useNavigate()
   function toggleDarkMode() {
     setIsDark((p) => !p);
     const root = document.documentElement;
@@ -44,8 +44,7 @@ const Header = () => {
             <Link className="text-md mr-4" to="/venues">
               Venues
             </Link>
-            <Link className="text-md mr-4" to="/players
-            ">
+            <Link className="text-md mr-4" to="/players">
               Players
             </Link>
             <Link className="text-md mr-4" to="/Teams">
@@ -83,12 +82,12 @@ const Header = () => {
                 >
                   Signup
                 </Link>
-                <Link
+                <div
                   className="block text-md hover:bg-gray-200 p-1 rounded"
-                  to="/logout"
+                  onClick={() => {Cookies.remove("user"); navigate("/")}}
                 >
                   Logout
-                </Link>
+                </div>
                 <Link
                   className="block text-md hover:bg-gray-200 p-1 rounded"
                   to="/contact"

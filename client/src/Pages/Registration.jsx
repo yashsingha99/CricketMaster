@@ -11,11 +11,12 @@ const Registration = () => {
   const handleRegister = async (data) => {
     try {
       const res = await RegisterUser(data);
-
-      if (res?.status == 200) {
+     console.log(res);
+     
+      if (res.status == 200) {
         alert("successfully register");
-        navigate("/dashboard");
-      } else alert("something went wrong");
+        navigate("/");
+      } else alert(`${res.response.data.message}`);
     } catch (error) {
       console.log(error);
     }

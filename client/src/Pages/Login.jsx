@@ -4,18 +4,22 @@ import { FaUser, FaLock } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { Login as LoginUser } from "../api/user.api";
 import { useForm } from "react-hook-form";
-
+import { useContext } from "react";
+import { AuthContext } from "../Context"
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
   const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
+
   const handleLogin = async (data) => {
     try {
       const res = await LoginUser(data);
-
-      if (res?.status == 200) {
+      console.log(res);
+      login();
+      if (res.status == 200) {
         alert("successfully logged in");
-        navigate("/dashboard");
-      } else alert("something went wrong");
+        navigate("/");
+      } else alert(`${res.response.data.message}`);
     } catch (error) {
       console.log(error);
     }
