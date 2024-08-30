@@ -22,67 +22,62 @@ const Registration = () => {
     reset();
   };
   return (
-    <div className="container">
-      <div className="wrapper">
-        <div className="form-box">
-          <form action="" onSubmit={handleSubmit(handleRegister)}>
-            <h1 className="black">SignUp</h1>
-            <div className="input-box">
-              <input
-                type="text"
-                placeholder="Username"
-                required
-                {...register("name", {
-                  required: true,
-                })}
-              />
-              <FaUser className="icon" />
-            </div>
-            <div className="input-box">
-              <input
-                type="email"
-                placeholder="Email"
-                required
-                {...register("email", {
-                  required: true,
-                })}
-              />
-              <FaEnvelope className="icon" />
-            </div>
-            <div className="input-box">
-              <input
-                type="Password"
-                placeholder="Password"
-                required
-                {...register("password", {
-                  required: true,
-                })}
-              />
-              <FaLock className="icon" />
-            </div>
-
-            <div className="input-box">
-              <input
-                type="text"
-                placeholder="Your Favourite Team"
-                // required
-              />
-            </div>
-            
-            
-            <div className="main-btn">
-              <button type="submit">Register</button>
-            </div>
-            <div className="register-link">
-              <h4 className="black">
-
-                Already have an account? <Link to="/Login">Login</Link>
-              </h4>
-            </div>
-          </form>
-        </div>
+    <form action="" onSubmit={handleSubmit(handleRegister)}>
+      <h1 className="black">SignUp</h1>
+      <div className="input-box">
+        <input
+          type="text"
+          placeholder="Username"
+          required
+          {...register("name", {
+            required: true,
+          })}
+        />
+        <FaUser className="icon" />
       </div>
-    </div>
+      <div className="input-box">
+        <input
+          type="email"
+          placeholder="Email"
+          required
+          {...register("email", {
+            required: true,
+          })}
+        />
+        <FaEnvelope className="icon" />
+      </div>
+      <div className="input-box">
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          {...register("password", {
+            required: true,
+          })}
+        />
+        <FaLock className="icon" />
+      </div>
+      <div className="input-box">
+        <input
+          type="text"
+          placeholder="Your Favourite Team"
+          required
+          {...register("name", {
+            required: true,
+          })}
+        />
+        <FaUser className="icon" />
+      </div>
+
+      <div className="main-btn">
+        <button type="submit">Register</button>
+      </div>
+      <div className="register-link">
+        <h4 className="black">
+          Already have an account? <Link to="/Login">Login</Link>
+        </h4>
+      </div>
+    </form>
   );
 };
 export default Registration;

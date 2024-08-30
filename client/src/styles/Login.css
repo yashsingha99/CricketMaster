@@ -28,10 +28,6 @@
     padding: 30px;
 }
 
-/* .wrapper .form-box.login {
-    transform: translateX(0);
-    transition: transform 0.18s ease;
-} */
 
 .wrapper.active .form-box.login {
     transform: translateX(-400px);
@@ -71,7 +67,7 @@ form .input-box {
     /* border: 1px solid black; */
     outline: none;
     border: 2px solid rgba(255, 255, 255, 0.1);
-    border-radius: 40px;
+    /* border-radius: 40px; */
     font-size: 16px;
     color: black;
     padding: 0 20px;

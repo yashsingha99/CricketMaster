@@ -20,6 +20,7 @@ const Header = () => {
 
   return (
     <nav className="h-full w-full bg-blue-950">
+      
       <div className="h-full w-full p-2 flex justify-between items-center">
         <div className="flex justify-center items-center gap-8">
           <Link className="text-white flex justify-center items-center" to="/">
@@ -43,6 +44,10 @@ const Header = () => {
             <Link className="text-md mr-4" to="/venues">
               Venues
             </Link>
+            <Link className="text-md mr-4" to="/players
+            ">
+              Players
+            </Link>
             <Link className="text-md mr-4" to="/Teams">
               Teams
             </Link>
@@ -50,7 +55,7 @@ const Header = () => {
 
           <div
             onMouseEnter={() => setIsdrop(true)}
-            onMouseLeave={() => setIsdrop(false)}
+            // onMouseLeave={() => setIsdrop(false)}
             className="mr-4 md-4 relative"
           >
             <p className="text-md cursor-pointer flex items-center">
@@ -58,7 +63,8 @@ const Header = () => {
               {isdrop ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
             </p>
             {isdrop && (
-              <div className="absolute w-60 bg-white text-black mt-2 z-10 p-2 rounded shadow-lg space-y-2">
+            
+              <div onMouseLeave={() => setIsdrop(false)}  className="absolute w-60 bg-white text-black mt-2 z-10 p-2 rounded shadow-lg space-y-2">
                 <Link
                   className="block text-md hover:bg-gray-200 p-1 rounded"
                   to="/profile"
