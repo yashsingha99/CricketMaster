@@ -15,7 +15,7 @@ const Registration = () => {
      
       if (res.status == 200) {
         alert("successfully register");
-        navigate("/");
+        navigate("/Login");
       } else alert(`${res.response.data.message}`);
     } catch (error) {
       console.log(error);

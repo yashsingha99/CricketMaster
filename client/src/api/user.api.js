@@ -17,7 +17,7 @@ export const Login = async (user) => {
 export const Register = async (user) => {
   try {
     const res = await axios.post(`${URI}/api/user/register`, user);
-    Login(user)
+    // Login(user)
     return res;
   } catch (error) {
     error = {...error , status : 400}

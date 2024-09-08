@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 const Ground = require("../models/grounds.model");
-const sample = require("../sample");
+const sample = require("../sample_data/sample");
 
 const groundQuery = async (req, res) => {
   try {
     const { name, _id } = req.body;
-
     const matchStage = [];
     if (name) {
       matchStage.push({ name: { $regex: name, $options: "i" } });
@@ -67,7 +66,7 @@ const addData = async () => {
     return res;
   } catch (error) {
     console.error("Error inserting sample data:", error.message);
-    throw error;  // Use throw to propagate the error
+    throw error; // Use throw to propagate the error
   }
 };
 

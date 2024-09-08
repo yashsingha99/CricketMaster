@@ -64,7 +64,7 @@ const Login = () => {
 
       <div className="register-link">
         <h4 className="black">
-          Don't have an account? <Link to="/registration">Register</Link>
+          Don't have an account? <Link to="/register">Register</Link>
         </h4>
       </div>
     </form>

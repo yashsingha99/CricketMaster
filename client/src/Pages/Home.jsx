@@ -12,7 +12,6 @@ import rcb from "../images/rcb.jpeg";
 import csk from "../images/csk.jpeg";
 import dc from "../images/dc.jpeg";
 
-
 const Home = () => {
   const teams = [
     {
@@ -76,7 +75,42 @@ const Home = () => {
       logo: dc,
     },
   ];
-
+  
+  const videos = [
+    {
+      title: "TATA IPL 2024: Top Moments",
+      date: "31 May, 2024",
+      views: "217.1k",
+      duration: "16:37 mins",
+      videoUrl:
+        "https://www.youtube.com/embed/Mj1I2nnQsqg?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&loop=1&playlist=Mj1I2nnQsqg",
+    },
+    {
+      title: "A delighted & emotional Andre Russell reflects on...",
+      date: "27 May, 2024",
+      views: "79.9k",
+      duration: "01:48 mins",
+      videoUrl:
+        "https://www.youtube.com/embed/gG6GMmwdE-g?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&loop=1&playlist=gG6GMmwdE-g",
+    },
+    {
+      title: "Champions speak: Post-match chat with Mitchell...",
+      date: "27 May, 2024",
+      views: "157.1k",
+      duration: "02:00 mins",
+      videoUrl:
+        "https://www.youtube.com/embed/P26JOXiwGlU?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&loop=1&playlist=P26JOXiwGlU",
+    },
+    {
+      title: "In conversation with IPL 2024 Winning Captain...",
+      date: "27 May, 2024",
+      views: "108.3k",
+      duration: "01:00 mins",
+      videoUrl:
+        "https://www.youtube.com/embed/9vz_0iVNTs0?autoplay=1&mute=1&controls=0&modestbranding=1&showinfo=0&rel=0&loop=1&playlist=9vz_0iVNTs0",
+    },
+  ];
+  `                                         `
   const images = [
     "https://static.toiimg.com/thumb/msid-99552788,width-1070,height-580,imgsize-212544,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
     "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202008/mumbai-indians-fb-2.jpeg?size=690:388",
@@ -125,7 +159,7 @@ const Home = () => {
       <div className="boss shadow-lg">
         <h1 className="poi mt-2 text-lg">Points Table</h1>
         <div className="points-table">
-          <div className="team-container flex justify- gap-5">
+          <div className="team-container flex  gap-5">
             {teams.map((team) => (
               <div key={team.position} className="team-card shadow-md ">
                 <div className="top">
@@ -166,11 +200,13 @@ const Home = () => {
           </div>
         </div>
         <div className="flex items-center justify-center">
-
-          <Link className="btn bg-blue-950 text-white p-3 rounded-lg mt-4" to="tables">
+          <Link
+            className="btn bg-blue-950 text-white p-3 rounded-lg mt-4"
+            to="tables"
+          >
             Full Points Table
           </Link>
-        </div >
+        </div>
       </div>
 
       <div className="table bg-blue-950 text-white">
@@ -196,6 +232,39 @@ const Home = () => {
               Players
             </Link>
           </div>
+        </div>
+      </div>
+      <div className="c mx-auto p-2">
+        <h2 className="text-3xl font-bold mb-6">Latest Videos</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          {videos.map((video, index) => (
+            <div
+              key={index}
+              className="bg-dark-blue rounded-lg overflow-hidden shadow-lg"
+            >
+              <div className="aspect-w-16 aspect-h-9">
+                <iframe
+                  className="w-full h-48"
+                  src={video.videoUrl}
+                  title={video.title}
+                  frameBorder="0"
+                  allow="accelerometer; looped; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  muted
+                ></iframe>
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-semibold">{video.title}</h3>
+                <div className="text-sm text-gray-400 flex items-center justify-between mt-2">
+                  <span>{video.date}</span>
+                  <span>{video.views}</span>
+                </div>
+                <div className="text-sm text-gray-400 mt-1">
+                  {video.duration}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
