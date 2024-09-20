@@ -1,19 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const yearStatSchema = new Schema({
-  year: {
-    type: Number,
-    required: true,
-  },
-  value: {
-    type: Number,
-    required: true,
-  },
-});
-
-const playerSchema = new Schema({
+const playerSchema = new mongoose.Schema({
   name: {
+    type: String,
+  },
+  img: {
     type: String,
   },
   country: {
@@ -24,13 +16,12 @@ const playerSchema = new Schema({
   },
   role: {
     type: String,
-    enum: ['bowler', 'batsman', 'all-rounder', 'wicketkeeper'],
   },
   battingAvg: {
-    type: mongoose.Types.Decimal128, // Using Decimal128 for more precise averages
+    type: Number,
   },
   strikeRate: {
-    type: mongoose.Types.Decimal128, // Using Decimal128 for more precise strike rates
+    type: Number,
   },
   matchesPlayed: {
     type: Number,
@@ -43,21 +34,22 @@ const playerSchema = new Schema({
   },
   wicketsTaken: {
     type: Number,
+    default: 0
   },
-  yearlyStats: [yearStatSchema], // Dynamic array of year-value pairs for scalability
-  Batting_Hand: {
+  performanceByYear: {
+    type: Map,
+    of: Number, 
+    default: {}
+  },
+  battingHand: {
     type: String,
-    enum: ['Right_Hand', 'Left_Hand'],
+    enum: ['Right_Hand', 'Left_Hand']
   },
-  Bowling_Skill: {
+  bowlingSkill: {
     type: String,
-  },
-}, {
-  timestamps: true, // Adding timestamps for record keeping
+    default: ""
+  }
 });
-
-// Adding compound index for better query performance in some scenarios
-playerSchema.index({ name: 1, country: 1, role: 1 });
 
 const Player = mongoose.model('Player', playerSchema);
 

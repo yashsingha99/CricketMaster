@@ -468,7 +468,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm fast-medium"
     },
     {
-      "name": "R Dravid",
+      "name": "Rahul Dravid",
+      "img": "http://t2.gstatic.com/images?q=tbn:ANd9GcSE4rgSGurF1NDuXpYY0Po275c1EQNsHujsKCswMolSMwiLdynGfqqGsb6rgmXOk3R6YcN-",
       "country": "India",
       "DOB": "1973-01-11",
       "role": "batsman",
@@ -598,7 +599,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium"
     },
     {
-      "name": "V Kohli",
+      "name": "Virat Kohli",
+      "img": "https://images.news18.com/ibnlive/uploads/2024/04/virat-kohli-glenn-maxwell-t20-world-cup-2024-04-15ea3f9519a4b70fbec554108e28f931.jpg?impolicy=website&width=640&height=480",
       "country": "India",
       "DOB": "1988-11-05",
       "role": "batsman",
@@ -702,7 +704,8 @@ const playerData = [
       "Bowling_Skill": "Left-arm medium-fast"
     },
     {
-      "name": "SR Watson",
+      "name": "Shane Watson",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7QIJ1UW-Fk7ls3EQJTlcNmk7wM865b3HVDg&s",
       "country": "Australia",
       "DOB": "1981-06-17",
       "role": "batsman",
@@ -728,7 +731,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm fast-medium"
     },
     {
-      "name": "A Mishra",
+      "name": "Amit Mishra",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaB1xa346A2nYi_NeUPRsXwCP7_QGnhOAHlg&s",
       "country": "India",
       "DOB": "1982-11-24",
       "role": "bowler",
@@ -779,7 +783,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm offbreak"
     },
     {
-      "name": "YK Pathan",
+      "name": "Yusuf Pathan",
+      "img": "https://blackhattalent.com/wp-content/uploads/2024/07/Yusuf-Pathan1.jpg",
       "country": "India",
       "DOB": "1982-11-17",
       "role": "batsman",
@@ -805,7 +810,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm offbreak"
     },
     {
-      "name": "RA Jadeja",
+      "name": "Ravindra Jadeja",
+      "img": "https://sportscafe.in/img/es3-gn/articles/Cricket_1/Ravindra%20Jadeja%20CSK.jfif",
       "country": "India",
       "DOB": "1988-12-06",
       "role": "batsman",
@@ -857,7 +863,8 @@ const playerData = [
       "Bowling_Skill": "Legbreak googly"
     },
     {
-      "name": "M Rawat",
+      "name": "Mahesh Rawat",
+      "img": "https://thehinduimages.com/admin/images/pimages/p616f017.jpg",
       "country": "India",
       "DOB": "1985-10-25",
       "role": "batsman",
@@ -883,7 +890,8 @@ const playerData = [
       "Bowling_Skill": "Unknown"
     },
     {
-      "name": "SK Trivedi",
+      "name": "Siddharth Trivedi",
+      "img": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/156800/156853.jpg",
       "country": "India",
       "DOB": "1982-09-04",
       "role": "batsman",
@@ -935,7 +943,8 @@ const playerData = [
       "Bowling_Skill": "Slow left-arm orthodox"
     },
     {
-      "name": "S Sreesanth",
+      "name": "Sreesanth",
+      "img" : "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/322200/322270.png",
       "country": "India",
       "DOB": "1983-02-06",
       "role": "bowler",
@@ -1170,6 +1179,7 @@ const playerData = [
     },
     {
       "name": "Yuvraj Singh",
+      "img": "https://miro.medium.com/v2/resize:fit:1400/1*VD957cbYcLzU9Q4I6TIMtA.jpeg",
       "country": "India",
       "DOB": "1981-12-12",
       "role": "bowler",
@@ -1273,7 +1283,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm offbreak"
     },
     {
-      "name": "A Nehra",
+      "name": "Ashish Nehra",
+      "img": "https://www.mykhel.com/img/2016/05/ashishnehra-mi-600-09-1462771751.jpg",
       "country": "India",
       "DOB": "1979-04-29",
       "role": "batsman",
@@ -1351,7 +1362,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm offbreak"
     },
     {
-      "name": "G Gambhir",
+      "name": "Gautam Gambhir",
+      "img": "https://c.ndtvimg.com/2024-05/4h1ng2s_gautam-gambhir-bcci_625x300_21_May_24.jpg?im=FeatureCrop,algorithm=dnn,width=806,height=605",
       "country": "India",
       "DOB": "1981-10-14",
       "role": "batsman",
@@ -1430,6 +1442,7 @@ const playerData = [
     },
     {
       "name": "AB de Villiers",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1HPwiaHcptQHzFPQyHu85TvS5d39dvB9GkQ&s",
       "country": "South Africa",
       "DOB": "1984-02-17",
       "role": "batsman",
@@ -1455,7 +1468,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium"
     },
     {
-      "name": "S Dhawan",
+      "name": "Shikhar Dhawan",
+      "img": "https://www.hindustantimes.com/static-content/1y/cricket-logos/players/shikhar-dhawan.png",
       "country": "India",
       "DOB": "1985-12-05",
       "role": "batsman",
@@ -1897,7 +1911,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium"
     },
     {
-      "name": "MS Dhoni",
+      "name": "Mahendra Singh Dhoni",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPinLI29p-pI1d6CjBBdA3uvMONWPURfsfAg&s",
       "country": "India",
       "DOB": "1981-07-07",
       "role": "batsman",
@@ -1923,7 +1938,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium"
     },
     {
-      "name": "SK Raina",
+      "name": "Suresh Raina",
+      "img":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fcaughtatpoint.com%2F2022%2F09%2F14%2Fwhy-suresh-raina-underrated%2F&psig=AOvVaw3t0QP4NGa3R9ZsNPK0Uvxj&ust=1725877051723000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPCt1JePs4gDFQAAAAAdAAAAABAJ",
       "country": "India",
       "DOB": "1986-11-27",
       "role": "batsman",
@@ -2314,6 +2330,7 @@ const playerData = [
     },
     {
       "name": "Harbhajan Singh",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Harbhajan_Singh%27s_Pepsi_promotional_event_%27Change_The_Game%27.jpg",
       "country": "India",
       "DOB": "1980-07-03",
       "role": "bowler",
@@ -2340,6 +2357,7 @@ const playerData = [
     },
     {
       "name": "DJ Bravo",
+      "img": "https://documents.iplt20.com/playerheadshot/ipl/284/25.png",
       "country": "West Indies",
       "DOB": "1983-10-07",
       "role": "bowler",
@@ -2418,6 +2436,7 @@ const playerData = [
     },
     {
       "name": "Joginder Sharma",
+      "img": "https://th-i.thgim.com/public/sport/cricket/ugizr/article66466676.ece/alternates/FREE_1200/JoginderSharma1.jpg",
       "country": "India",
       "DOB": "1983-10-23",
       "role": "bowler",
@@ -2469,7 +2488,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm fast-medium"
     },
     {
-      "name": "MM Patel",
+      "name": "Munaf Patel",
+      "img": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/322600/322625.png",
       "country": "India",
       "DOB": "1983-07-12",
       "role": "batsman",
@@ -2547,7 +2567,8 @@ const playerData = [
       "Bowling_Skill": "Legbreak"
     },
     {
-      "name": "DB Ravi Teja",
+      "name": "Dwaraka Ravi Teja",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIqlE1wnmY5kJVVkZb7o7HikWeTs_JbqSR1ryxnmoLdT0iZhXwXlaPXSVVX3pAKYF0eDY&usqp=CAU",
       "country": "India",
       "DOB": "1987-09-05",
       "role": "batsman",
@@ -2703,7 +2724,8 @@ const playerData = [
           "Bowling_Skill": "Right-arm offbreak"
       },
   {
-      "name": "Z Khan",
+      "name": "Zaheer Khan",
+      "img": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/319900/319956.png",
       "country": "India",
       "DOB": "1978-10-07",
       "role": "bowler",
@@ -2729,7 +2751,8 @@ const playerData = [
       "Bowling_Skill": "Left-arm fast-medium"
     },
     {
-      "name": "SC Ganguly",
+      "name": "Sourav Ganguly",
+      "img": "https://blackhattalent.com/wp-content/uploads/2023/07/Sourav-Ganguly11.webp",
       "country": "India",
       "DOB": "1972-07-08",
       "role": "batsman",
@@ -2807,7 +2830,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium"
     },
     {
-      "name": "LR Shukla",
+      "name": "Laxmi Ratan Shukla",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4KXwMhi-LhY05QxB4ntoHUKuEqrOgweAu9A&s",
       "country": "India",
       "DOB": "1981-05-06",
       "role": "batsman",
@@ -2859,7 +2883,8 @@ const playerData = [
       "Bowling_Skill": "Slow left-arm orthodox"
     },
     {
-      "name": "WP Saha",
+      "name": "Wriddhiman Saha",
+      "img": "https://documents.iplt20.com/ipl/IPLHeadshot2024/225.png",
       "country": "India",
       "DOB": "1984-10-24",
       "role": "batsman",
@@ -3015,7 +3040,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium-fast"
     },
     {
-      "name": "I Sharma",
+      "name": "Ishant Sharma",
+      "img": "https://www.india.com/wp-content/uploads/2015/01/ishant-sharma1.jpg",
       "country": "India",
       "DOB": "1988-09-02",
       "role": "batsman",
@@ -3588,6 +3614,7 @@ const playerData = [
     },
     {
       "name": "Mohammad Hafeez",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZjaRq21pQCJMD8hulBh54246yCDaTvmdNNg&s",
       "country": "Pakistan",
       "DOB": "1980-10-17",
       "role": "bowler",
@@ -3640,6 +3667,7 @@ const playerData = [
     },
     {
       "name": "Shoaib Akhtar",
+      "img": "https://static.theprint.in/wp-content/uploads/2020/01/Shoaib-Akhtar.jpg",
       "country": "Pakistan",
       "DOB": "1975-08-13",
       "role": "batsman",
@@ -4732,6 +4760,7 @@ const playerData = [
     },
     {
       "name": "R Ashwin",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKuhvwFfn52-UMfHFNRgZbK-7Taz5rGEz-3g&s",
       "country": "India",
       "DOB": "1986-09-17",
       "role": "bowler",
@@ -4939,7 +4968,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm fast-medium"
     },
     {
-      "name": "M Vijay",
+      "name": "Murali Vijay",
+      "img": "https://parimatchnews.com/wp-content/uploads/2020/11/Murali-Vijay.png",
       "country": "India",
       "DOB": "1984-04-01",
       "role": "batsman",
@@ -5069,7 +5099,8 @@ const playerData = [
       "Bowling_Skill": "Legbreak googly"
     },
     {
-      "name": "KP Pietersen",
+      "name": "Kevin Pietersen",
+      "img": "https://static.tnn.in/photo/105915911/105915911.jpg",
       "country": "South Africa",
       "DOB": "1980-06-27",
       "role": "batsman",
@@ -5174,6 +5205,7 @@ const playerData = [
     },
     {
       "name": "Harmeet Singh",
+      "img": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/382800/382830.png",
       "country": "India",
       "DOB": "1992-09-07",
       "role": "bowler",
@@ -5251,7 +5283,8 @@ const playerData = [
       "Bowling_Skill": "Legbreak"
     },
     {
-      "name": "NV Ojha",
+      "name": "Naman Ojha",
+      "img": "https://www.sportzpics.co.za/img-get2/I0000pRInVzk0ahQ/fit=1000x750/Naman-Ojha-IMG-9419.jpg",
       "country": "India",
       "DOB": "1983-07-20",
       "role": "batsman",
@@ -5303,7 +5336,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm fast-medium"
     },
     {
-      "name": "SL Malinga",
+      "name": "Lasith Malinga",
+      "img": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/316500/316539.png",
       "country": "Sri Lanka",
       "DOB": "1983-08-28",
       "role": "bowler",
@@ -5407,7 +5441,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium"
     },
     {
-      "name": "CH Gayle",
+      "name": "Chris Gayle",
+      "img": "https://static.toiimg.com/thumb/msid-79300434,width-400,resizemode-4/79300434.jpg",
       "country": "West Indies",
       "DOB": "1979-09-21",
       "role": "bowler",
@@ -6057,7 +6092,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium"
     },
     {
-      "name": "KM Jadhav",
+      "name": "Kedar Jadhav",
+      "img": "https://admin.thecricketer.com/weblab/Sites/96c8b790-b593-bfda-0ba4-ecd3a9fdefc2/resources/images/site/kjadhavheadshot-min.jpg",
       "country": "India",
       "DOB": "1985-03-26",
       "role": "batsman",
@@ -6161,7 +6197,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm offbreak"
     },
     {
-      "name": "R Sharma",
+      "name": "Rohit Sharma",
+      "img": "https://static.toiimg.com/thumb/msid-111741230,width-1280,height-720,resizemode-4/111741230.jpg",
       "country": "India",
       "DOB": "1987-04-30",
       "role": "batsman",
@@ -6214,6 +6251,7 @@ const playerData = [
     },
   {
       "name": "AT Rayudu",
+      "img": "https://ik.imagekit.io/j83rchiauw/A_List_Star/ambati-raydu-cricket.webp",
       "country": "India",
       "DOB": "1985-09-23",
       "role": "batsman",
@@ -6239,7 +6277,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm offbreak"
     },
     {
-      "name": "R Sathish",
+      "name": "Rajagopal Sathish",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT17Dmai1o8xxTwg6wkFSCC1HDjmMM4y3Xm5w&s",
       "country": "India",
       "DOB": "1981-01-14",
       "role": "batsman",
@@ -9047,7 +9086,8 @@ const playerData = [
       "Bowling_Skill": "Slow left-arm chinaman"
     },
     {
-      "name": "RJ Peterson",
+      "name": "Robin Peterson",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzrTU5L5MsRpKu4BFON-c3DbAgrC6ZcXfDl5jXI9QYKHc8qsg8xG9UUfDupfINyG2DRPg&usqp=CAU",
       "country": "South Africa",
       "DOB": "1979-08-04",
       "role": "batsman",
@@ -9203,7 +9243,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm fast"
     },
     {
-      "name": "DA Miller",
+      "name": "David Miller",
+      "img": "https://documents.iplt20.com/ipl/IPLHeadshot2024/128.png",
       "country": "South Africa",
       "DOB": "1989-06-10",
       "role": "batsman",
@@ -9229,7 +9270,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm offbreak"
     },
     {
-      "name": "P Negi",
+      "name": "Pawan Negi",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcKaEWD9uwh-ec-rwbi-U7fKmnSmS0q17msVzMwdEaCpU2oQkrVpwL-mbBZFdziiMPzw4&usqp=CAU",
       "country": "India",
       "DOB": "1993-01-06",
       "role": "batsman",
@@ -9282,6 +9324,7 @@ const playerData = [
     },
     {
       "name": "Gurkeerat Singh",
+      "img": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/321500/321506.jpg",
       "country": "India",
       "DOB": "1990-06-29",
       "role": "batsman",
@@ -9307,7 +9350,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm offbreak"
     },
     {
-      "name": "MJ Clarke",
+      "name": "Michael Clarke",
+      "img": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/316400/316498.png",
       "country": "Australia",
       "DOB": "1981-04-02",
       "role": "bowler",
@@ -9360,6 +9404,7 @@ const playerData = [
     },
     {
       "name": "SPD Smith",
+      "img": "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/09/18/925877-818250-steve-smith.jpg",
       "country": "India",
       "DOB": "1989-06-02",
       "role": "batsman",
@@ -9385,7 +9430,8 @@ const playerData = [
       "Bowling_Skill": "Legbreak googly"
     },
     {
-      "name": "MN Samuels",
+      "name": "Marlon Samuels",
+      "img": "https://st3.cricketcountry.com/wp-content/uploads/cricket/4ca81a6eaf55db3e437c5efd0647d6d2.jpeg",
       "country": "West Indies",
       "DOB": "1981-02-05",
       "role": "batsman",
@@ -9463,7 +9509,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm fast-medium"
     },
   {
-      "name": "AD Russell",
+      "name": "Andrew Russell",
+      "img": "https://documents.iplt20.com/ipl/IPLHeadshot2024/141.png",
       "country": "West Indies",
       "DOB": "1988-04-29",
       "role": "batsman",
@@ -9984,6 +10031,7 @@ const playerData = [
     },
     {
       "name": "Mohammed Shami",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrFG0oDXjI_yw6R1fDCXBcLdts8im1ideeew&s",
       "country": "India",
       "DOB": "1990-09-03",
       "role": "bowler",
@@ -10061,7 +10109,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium-fast"
     },
     {
-      "name": "JJ Bumrah",
+      "name": "Jasprit Bumrah",
+      "img": "https://i.pinimg.com/564x/d9/ef/4b/d9ef4b4e63d5fcc1d92773c93c033b2e.jpg",
       "country": "India",
       "DOB": "1993-12-06",
       "role": "bowler",
@@ -10270,6 +10319,7 @@ const playerData = [
     },
     {
       "name": "KL Rahul",
+      "img": "https://img.redbull.com/images/c_crop,w_1600,h_800,x_0,y_14,f_auto,q_auto/c_scale,w_1200/redbullcom/2020/4/18/dzzrqdgdjp8xmidszpz5/kl-rahul-india-cricket-team-opening-batsman",
       "country": "India",
       "DOB": "1992-04-18",
       "role": "batsman",
@@ -10581,7 +10631,8 @@ const playerData = [
       "Bowling_Skill": ""
     },
     {
-      "name": "Q de Kock",
+      "name": "Quinton De Kock",
+      "img": "https://documents.iplt20.com/ipl/IPLHeadshot2024/170.png",
       "country": "South Africa",
       "DOB": "1992-12-17",
       "role": "batsman",
@@ -10607,7 +10658,8 @@ const playerData = [
       "Bowling_Skill": ""
     },
     {
-      "name": "YS Chahal",
+      "name": "Yuzvendra Chahal",
+      "img": "https://www.hindustantimes.com/static-content/1y/cricket-logos/players/yuzvendra-chahal.png",
       "country": "India",
       "DOB": "1990-07-23",
       "role": "bowler",
@@ -10841,7 +10893,8 @@ const playerData = [
       "Bowling_Skill": "Left-arm medium-fast"
     },
     {
-      "name": "MA Starc",
+      "name": "Mitchell Starc",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcwGYbAGCFBSArzLlYDApsbCqS9RvzFOBjNQ&s",
       "country": "Australia",
       "DOB": "1990-01-30",
       "role": "bowler",
@@ -11127,7 +11180,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm offbreak"
     },
     {
-      "name": "V Shankar",
+      "name": "Vijay Shankar",
+      "img": "https://www.gujarattitansipl.com/static-assets/images/players/61738.png?v=4.74",
       "country": "India",
       "DOB": "1991-01-26",
       "role": "bowler",
@@ -11309,7 +11363,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium-fast"
     },
     {
-      "name": "HH Pandya",
+      "name": "Hardik Pandya",
+      "img": "https://images.icc-cricket.com/image/upload/t_ratio21_9-size60/prd/xd3ueyioo79yvfxwvyaa",
       "country": "India",
       "DOB": "1993-10-11",
       "role": "batsman",
@@ -11439,7 +11494,8 @@ const playerData = [
       "Bowling_Skill": "Left-arm orthodox"
     },
   {
-      "name": "SS Iyer",
+      "name": "Shreyas Iyer",
+      "img": "https://c.ndtvimg.com/2021-09/vd4b4vr_shreyas-iyer-instagram_625x300_15_September_21.jpg",
       "country": "India",
       "DOB": "1994-12-06",
       "role": "batsman",
@@ -11543,7 +11599,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm fast-medium"
     },
     {
-      "name": "J Yadav",
+      "name": "Jayant Yadav",
+      "img": "https://documents.iplt20.com/ipl/IPLHeadshot2024/21.png",
       "country": "India",
       "DOB": "1990-01-22",
       "role": "bowler",
@@ -11569,7 +11626,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm offbreak"
     },
     {
-      "name": "SN Thakur",
+      "name": "Shardul Thakur",
+      "img": "https://www.mykhel.com/thumb/220x100x220/cricket/players/9/5919.1680520866.jpg",
       "country": "India",
       "DOB": "1991-10-16",
       "role": "bowler",
@@ -11595,7 +11653,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium"
     },
     {
-      "name": "KS Williamson",
+      "name": "Kane Williamson",
+      "img": "https://static.toiimg.com/thumb/msid-82102753,width-400,resizemode-4/82102753.jpg",
       "country": "New Zealand",
       "DOB": "1990-08-08",
       "role": "batsman",
@@ -11699,7 +11758,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm medium-fast"
     },
     {
-      "name": "S Kaushik",
+      "name": "Shivill Kaushik",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_s7gJKBHiK18Wo9ZEsHzexMWWd7BJWhU2-g&s",
       "country": "India",
       "DOB": "1995-09-07",
       "role": "batsman",
@@ -11725,7 +11785,8 @@ const playerData = [
       "Bowling_Skill": "Slow left-arm chinaman"
     },
     {
-      "name": "DL Chahar",
+      "name": "Deepak Chahar",
+      "img": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_320,q_50/lsci/db/PICTURES/CMS/322700/322704.png",
       "country": "India",
       "DOB": "1992-08-07",
       "role": "bowler",
@@ -11777,7 +11838,8 @@ const playerData = [
       "Bowling_Skill": "Legbreak googly"
     },
     {
-      "name": "RR Pant",
+      "name": "Rishabh Pant",
+      "img": "https://images.news18.com/ibnlive/uploads/2024/06/rishabh-pant-looking-forward-to-the-india-vs-pakistan-clash-2024-06-b2d7c5c5fd82f38c33a896325cdb599c.jpg",
       "country": "India",
       "DOB": "1997-10-04",
       "role": "batsman",
@@ -11881,7 +11943,8 @@ const playerData = [
       "Bowling_Skill": ""
     },
     {
-      "name": "KH Pandya",
+      "name": "Krunal Pandya",
+      "img": "https://www.lucknowsupergiants.in/static-assets/images/players/63788.png?v=12.18",
       "country": "India",
       "DOB": "1991-03-24",
       "role": "batsman",
@@ -11986,6 +12049,7 @@ const playerData = [
     },
     {
       "name": "Kuldeep Yadav",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHLcPGUVGa8BNyArxfz-_Jwpvx_uEilkiaVw&s",
       "country": "India",
       "DOB": "1994-12-14",
       "role": "bowler",
@@ -12011,7 +12075,8 @@ const playerData = [
       "Bowling_Skill": "Slow left-arm chinaman"
     },
     {
-      "name": "M Ashwin",
+      "name": "Murugan Ashwin",
+      "img": "https://bengali.mykhel.com/thumb/220x100x220/cricket/players/4/9684.1680524476.jpg",
       "country": "India",
       "DOB": "1990-09-08",
       "role": "bowler",
@@ -12038,6 +12103,7 @@ const playerData = [
     },
     {
       "name": "Ishan Kishan",
+      "img": "https://documents.iplt20.com/ipl/IPLHeadshot2024/164.png",
       "country": "India",
       "DOB": "1998-07-18",
       "role": "batsman",
@@ -12063,7 +12129,8 @@ const playerData = [
       "Bowling_Skill": ""
     },
   {
-      "name": "MJ Guptill",
+      "name": "Martin Guptill",
+      "img": "https://www.lakriders.us/static-assets/images/players/4964.png?v=1.27",
       "country": "New Zealand",
       "DOB": "1986-09-30",
       "role": "batsman",
@@ -12090,6 +12157,7 @@ const playerData = [
     },
     {
       "name": "Mustafizur Rahman",
+      "img": "https://www.mykhel.com/thumb/220x100x220/cricket/players/2/6752.1671619123.jpg",
       "country": "Bangladesh",
       "DOB": "1995-09-06",
       "role": "bowler",
@@ -12167,7 +12235,8 @@ const playerData = [
       "Bowling_Skill": "Right-arm fast-medium"
     },
     {
-      "name": "ER Dwivedi",
+      "name": "Eklavya Dwivedi",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSw-RxYbbj1GNNxoz2ELACOyos5q_bVM7iGw&s",
       "country": "India",
       "DOB": "1988-07-22",
       "role": "batsman",
@@ -12452,8 +12521,5 @@ const playerData = [
       "Batting_Hand": "Right_Hand",
       "Bowling_Skill": ""
     }
-  
-  
-  
 ]
 module.exports = playerData

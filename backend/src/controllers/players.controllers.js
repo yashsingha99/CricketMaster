@@ -60,7 +60,7 @@ const playerQuery = async (req, res) => {
 const addData = async () => {
   try {
     await Player.deleteMany({});
-    const iplPlayer = playerData.filter((data) => (data.country === "India" || data === "india"))
+    // const iplPlayer = playerData.filter((data) => (data.country === "India" || data === "india"))
     const res = await Player.insertMany(playerData);
     console.log("Sample data inserted successfully!");
     return res;

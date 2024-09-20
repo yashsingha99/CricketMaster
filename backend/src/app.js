@@ -17,7 +17,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 app.use(cookieParser());
 
-// const teamRouter = require("./routers/team.routes")
 const matchRouter = require("./routers/match.routes");
 app.use("/api/match", matchRouter);
 
@@ -28,6 +27,7 @@ const userRouter = require("./routers/user.routes");
 app.use("/api/user", userRouter);
 // app.use('/api/ground', groundRouter)
 // app.use('/api/match', matchRouter)
+// const teamRouter = require("./routers/team.routes")
 // app.use('/api/team', teamRouter)
 
 const ground = require("./routers/ground.routes");
